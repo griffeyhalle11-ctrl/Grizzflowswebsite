@@ -12,73 +12,25 @@
         :root {
             --orange: #FF6B35;
             --orange-dark: #E55A2B;
-            --charcoal: #1A1A1A;<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GrizzFlow's Garage | South Bay Garage Cleanup & Organization</title>
-    <meta name="description" content="Professional garage cleanup and organization in the South Bay. We transform cluttered garages into functional spaces. Serving Her# GrizzFlow's Garage 🐻
-
-A fun, interactive website for GrizzFlow's Garage - South Bay LA's premier garage cleanup and organization service.
-
-## Features
-
-- **Animated Bear Mascot** - Bouncing, waving Grizz adds personality
-- **Interactive Quiz** - "How Messy Is Your Garage?" slider with live pricing
-- **How It Works Section** - Simple 3-step process explanation
-- **Chatbot Widget** - Answers common FAQs about services, pricing, and areas
-- **Confetti Celebration** - Fun confetti burst when form is submitted
-- **Mobile Responsive** - Looks great on all devices
-
-## Service Areas
-
-- Hermosa Beach
-- Manhattan Beach
-- Redondo Beach
-- Torrance
-- El Segundo
-- Palos Verdes
-
-## Pricing
-
-| Package | Price | Description |
-|---------|-------|-------------|
-| Grizz Light | $325 | Basic cleanup for lighter messes |
-| Grizz Standard | $475 | Full cleanup and organization |
-| Grizz Deep | $625 | Deep cleaning with heavy lifting |
-| Grizz Total | $800+ | Complete garage transformation |
-
-## Contact
-
-- **Phone:** (509) 860-9850
-- **Email:** grizzflowsgarage@gmail.com
-- **Website:** [grizzflowsgarage.com](https://grizzflowsgarage.com)
-
-## Deployment
-
-Currently deployed on Netlify. To update:
-1. Make changes to `index.html`
-2. Upload to Netlify dashboard
-
----
-*Built with 🐻 energy*
-mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --orange: #FF6B35;
-            --orange-dark: #E55A2B;
+            --orange-glow: rgba(255, 107, 53, 0.15);
             --charcoal: #1A1A1A;
+            --charcoal-warm: #1E1C1A;
             --steel: #2D2D2D;
+            --steel-warm: #302E2B;
             --concrete: #3A3A3A;
             --light-gray: #E8E8E8;
             --off-white: #F5F5F0;
             --accent-yellow: #FFD23F;
             --fun-green: #4ECDC4;
             --fun-purple: #9B59B6;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.2);
+            --shadow-md: 0 8px 24px rgba(0,0,0,0.25);
+            --shadow-lg: 0 16px 48px rgba(0,0,0,0.3);
+            --shadow-orange: 0 8px 32px rgba(255,107,53,0.25);
+            --radius-sm: 12px;
+            --radius-md: 20px;
+            --radius-lg: 28px;
+            --radius-full: 100px;
         }
 
         * {
@@ -93,10 +45,17 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
 
         body {
             font-family: 'Barlow', sans-serif;
-            background: var(--charcoal);
+            background: var(--charcoal-warm);
             color: var(--off-white);
-            line-height: 1.6;
+            line-height: 1.7;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        ::selection {
+            background: var(--orange);
+            color: var(--charcoal);
         }
 
         .container {
@@ -105,33 +64,47 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
             padding: 0 24px;
         }
 
-        /* Fun cursor trail */
-        .cursor-trail {
-            position: fixed;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
+        /* Floating junk - more subtle */
+        .floating-junk {
+            position: absolute;
+            font-size: 24px;
+            opacity: 0.08;
+            animation: floatAway 20s linear infinite;
             pointer-events: none;
-            z-index: 9999;
-            opacity: 0;
-            transition: opacity 0.3s;
         }
 
-        /* Navigation */
+        @keyframes floatAway {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% { opacity: 0.08; }
+            90% { opacity: 0.08; }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* ==================== NAVIGATION ==================== */
         nav {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             z-index: 1000;
-            padding: 20px 0;
-            background: linear-gradient(to bottom, rgba(26,26,26,0.95) 0%, rgba(26,26,26,0) 100%);
-            transition: background 0.3s ease;
+            padding: 16px 0;
+            background: transparent;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         nav.scrolled {
-            background: rgba(26,26,26,0.98);
-            backdrop-filter: blur(10px);
+            background: rgba(26,26,26,0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+            padding: 12px 0;
         }
 
         .nav-content {
@@ -143,7 +116,7 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
         .logo {
             font-family: 'Bebas Neue', sans-serif;
             font-size: 28px;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             color: var(--off-white);
             text-decoration: none;
             display: flex;
@@ -152,8 +125,8 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
         }
 
         .logo-bear {
-            font-size: 36px;
-            animation: bearBounce 2s ease-in-out infinite;
+            font-size: 32px;
+            animation: bearBounce 3s ease-in-out infinite;
             cursor: pointer;
             transition: transform 0.3s;
         }
@@ -164,42 +137,41 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
 
         @keyframes bearBounce {
             0%, 100% { transform: translateY(0) rotate(0deg); }
-            25% { transform: translateY(-5px) rotate(-5deg); }
-            75% { transform: translateY(-5px) rotate(5deg); }
+            50% { transform: translateY(-4px) rotate(3deg); }
         }
 
         @keyframes bearWave {
             0%, 100% { transform: rotate(0deg) scale(1); }
-            25% { transform: rotate(-20deg) scale(1.2); }
-            75% { transform: rotate(20deg) scale(1.2); }
+            25% { transform: rotate(-15deg) scale(1.15); }
+            75% { transform: rotate(15deg) scale(1.15); }
         }
 
         .nav-links {
             display: flex;
-            gap: 40px;
+            gap: 36px;
             list-style: none;
         }
 
         .nav-links a {
-            color: var(--light-gray);
+            color: rgba(232,232,232,0.8);
             text-decoration: none;
             font-weight: 500;
-            font-size: 14px;
-            letter-spacing: 1px;
+            font-size: 13px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
-            transition: all 0.3s;
+            transition: color 0.3s;
             position: relative;
         }
 
         .nav-links a::after {
             content: '';
             position: absolute;
-            bottom: -5px;
+            bottom: -6px;
             left: 0;
             width: 0;
-            height: 3px;
+            height: 2px;
             background: var(--orange);
-            transition: width 0.3s;
+            transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             border-radius: 2px;
         }
 
@@ -208,77 +180,120 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
         }
 
         .nav-links a:hover {
-            color: var(--orange);
-            transform: translateY(-2px);
+            color: var(--off-white);
         }
 
         .nav-cta {
             background: var(--orange);
             color: var(--charcoal);
             padding: 12px 28px;
-            border-radius: 100px;
+            border-radius: var(--radius-full);
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
-            font-size: 14px;
+            font-size: 13px;
             text-decoration: none;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .nav-cta::before {
-            content: '🐻';
-            position: absolute;
-            left: -30px;
-            transition: left 0.3s;
-        }
-
-        .nav-cta:hover::before {
-            left: 10px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow-orange);
         }
 
         .nav-cta:hover {
             background: var(--accent-yellow);
-            transform: scale(1.05);
-            padding-left: 40px;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 36px rgba(255,107,53,0.35);
         }
 
-        /* Hero Section */
+        /* Mobile hamburger menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 8px;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--off-white);
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* Mobile menu overlay */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(26,26,26,0.98);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 999;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .mobile-menu.open {
+            display: flex;
+            opacity: 1;
+        }
+
+        .mobile-menu a {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 36px;
+            letter-spacing: 4px;
+            color: var(--off-white);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .mobile-menu a:hover {
+            color: var(--orange);
+        }
+
+        /* ==================== HERO ==================== */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
             position: relative;
             padding: 120px 0 80px;
-            background: var(--charcoal);
+            background: var(--charcoal-warm);
             overflow: hidden;
         }
 
-        /* Floating junk animation */
-        .floating-junk {
+        .hero::before {
+            content: '';
             position: absolute;
-            font-size: 30px;
-            opacity: 0.15;
-            animation: floatAway 15s linear infinite;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(255,107,53,0.06) 0%, transparent 70%);
             pointer-events: none;
-        }
-
-        @keyframes floatAway {
-            0% {
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.15;
-            }
-            90% {
-                opacity: 0.15;
-            }
-            100% {
-                transform: translateY(-100px) rotate(360deg);
-                opacity: 0;
-            }
         }
 
         .hero-content {
@@ -294,27 +309,22 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(255,107,53,0.15);
-            border: 1px solid rgba(255,107,53,0.3);
-            padding: 8px 16px;
-            border-radius: 100px;
+            background: var(--orange-glow);
+            border: 1px solid rgba(255,107,53,0.25);
+            padding: 8px 18px;
+            border-radius: var(--radius-full);
             font-size: 13px;
             font-weight: 600;
             color: var(--orange);
-            margin-bottom: 24px;
-            animation: fadeInUp 0.6s ease-out, pulse-badge 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse-badge {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(255,107,53,0.4); }
-            50% { box-shadow: 0 0 20px 5px rgba(255,107,53,0.2); }
+            margin-bottom: 28px;
+            animation: fadeInUp 0.6s ease-out;
         }
 
         .hero h1 {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(48px, 8vw, 96px);
+            font-size: clamp(52px, 7vw, 88px);
             line-height: 0.95;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             margin-bottom: 24px;
             animation: fadeInUp 0.6s ease-out 0.1s both;
         }
@@ -322,21 +332,14 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
         .hero h1 span {
             color: var(--orange);
             display: inline-block;
-            animation: garageShake 3s ease-in-out infinite;
-        }
-
-        @keyframes garageShake {
-            0%, 100% { transform: rotate(0deg); }
-            2% { transform: rotate(-2deg); }
-            4% { transform: rotate(2deg); }
-            6% { transform: rotate(0deg); }
         }
 
         .hero-subtitle {
-            font-size: 20px;
+            font-size: 18px;
             color: var(--light-gray);
             margin-bottom: 40px;
-            max-width: 500px;
+            max-width: 480px;
+            line-height: 1.8;
             animation: fadeInUp 0.6s ease-out 0.2s both;
         }
 
@@ -346,11 +349,17 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
             animation: fadeInUp 0.6s ease-out 0.3s both;
         }
 
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ==================== BUTTONS ==================== */
         .btn-primary {
             background: var(--orange);
             color: var(--charcoal);
             padding: 18px 36px;
-            border-radius: 100px;
+            border-radius: var(--radius-full);
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -359,42 +368,27 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            transition: all 0.3s;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             border: none;
             cursor: pointer;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-primary::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            background: var(--accent-yellow);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-            z-index: -1;
-        }
-
-        .btn-primary:hover::after {
-            width: 300px;
-            height: 300px;
+            box-shadow: var(--shadow-orange);
         }
 
         .btn-primary:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 10px 30px rgba(255,107,53,0.4);
+            background: #FF7D4D;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(255,107,53,0.4);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
         }
 
         .btn-secondary {
             background: transparent;
             color: var(--off-white);
             padding: 18px 36px;
-            border-radius: 100px;
+            border-radius: var(--radius-full);
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -403,44 +397,58 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            border: 2px solid var(--concrete);
-            transition: all 0.3s;
+            border: 2px solid rgba(255,255,255,0.15);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .btn-secondary:hover {
             border-color: var(--orange);
             color: var(--orange);
-            transform: translateY(-3px);
+            background: var(--orange-glow);
+            transform: translateY(-2px);
         }
 
-        /* Mess Meter - Fun Interactive Element */
+        /* ==================== MESS METER ==================== */
         .mess-meter-card {
-            background: var(--steel);
-            border-radius: 24px;
-            padding: 40px;
-            border: 2px solid var(--concrete);
+            background: var(--steel-warm);
+            border-radius: var(--radius-lg);
+            padding: 36px;
+            border: 1px solid rgba(255,255,255,0.06);
             position: relative;
             overflow: hidden;
-            transition: all 0.4s;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow-lg);
         }
 
-        .mess-meter-card:hover {
-            border-color: var(--orange);
-            transform: translateY(-5px);
+        .mess-meter-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--orange), var(--accent-yellow), var(--orange));
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .mess-meter-card:hover::before {
+            opacity: 1;
         }
 
         .mess-meter-title {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 28px;
+            font-size: 26px;
             color: var(--orange);
-            margin-bottom: 20px;
+            margin-bottom: 24px;
             display: flex;
             align-items: center;
             gap: 10px;
+            letter-spacing: 1px;
         }
 
         .mess-meter-title span {
-            animation: spin 2s linear infinite;
+            animation: spin 3s linear infinite;
             display: inline-block;
         }
 
@@ -452,40 +460,40 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
         .mess-meter {
             display: flex;
             flex-direction: column;
-            gap: 15px;
-            margin-bottom: 30px;
+            gap: 12px;
+            margin-bottom: 24px;
         }
 
         .mess-option {
             display: flex;
             align-items: center;
-            gap: 15px;
-            padding: 15px 20px;
-            background: var(--concrete);
-            border-radius: 12px;
+            gap: 14px;
+            padding: 14px 18px;
+            background: rgba(255,255,255,0.03);
+            border-radius: var(--radius-sm);
             cursor: pointer;
-            transition: all 0.3s;
-            border: 2px solid transparent;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255,255,255,0.04);
         }
 
         .mess-option:hover {
-            background: var(--charcoal);
-            border-color: var(--orange);
-            transform: translateX(10px);
+            background: rgba(255,107,53,0.08);
+            border-color: rgba(255,107,53,0.2);
+            transform: translateX(6px);
         }
 
         .mess-option.selected {
-            background: rgba(255,107,53,0.2);
+            background: rgba(255,107,53,0.12);
             border-color: var(--orange);
         }
 
         .mess-emoji {
-            font-size: 32px;
+            font-size: 28px;
             transition: transform 0.3s;
         }
 
         .mess-option:hover .mess-emoji {
-            transform: scale(1.3) rotate(10deg);
+            transform: scale(1.2);
         }
 
         .mess-label {
@@ -494,105 +502,103 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
 
         .mess-label strong {
             display: block;
-            font-size: 16px;
+            font-size: 15px;
             margin-bottom: 2px;
         }
 
         .mess-label span {
             font-size: 13px;
-            color: var(--light-gray);
+            color: rgba(232,232,232,0.6);
         }
 
         .mess-price {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 24px;
+            font-size: 22px;
             color: var(--orange);
         }
 
         .mess-result {
             text-align: center;
             padding: 20px;
-            background: linear-gradient(135deg, rgba(255,107,53,0.2) 0%, rgba(255,210,63,0.1) 100%);
-            border-radius: 16px;
+            background: linear-gradient(135deg, rgba(255,107,53,0.12) 0%, rgba(255,210,63,0.06) 100%);
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255,107,53,0.15);
             display: none;
         }
 
         .mess-result.show {
             display: block;
-            animation: popIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            animation: popIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
 
         @keyframes popIn {
-            0% { transform: scale(0); opacity: 0; }
+            0% { transform: scale(0.9); opacity: 0; }
             100% { transform: scale(1); opacity: 1; }
         }
 
         .mess-result-text {
-            font-size: 18px;
-            margin-bottom: 15px;
+            font-size: 16px;
+            margin-bottom: 16px;
         }
 
         .mess-result-cta {
             background: var(--orange);
             color: var(--charcoal);
-            padding: 12px 24px;
+            padding: 12px 28px;
             border: none;
-            border-radius: 100px;
+            border-radius: var(--radius-full);
             font-weight: 700;
+            font-size: 14px;
             cursor: pointer;
             transition: all 0.3s;
         }
 
         .mess-result-cta:hover {
             background: var(--accent-yellow);
-            transform: scale(1.05);
+            transform: translateY(-2px);
         }
 
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Services Section */
+        /* ==================== SECTIONS ==================== */
         .services {
             padding: 120px 0;
-            background: var(--steel);
+            background: var(--steel-warm);
             position: relative;
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 80px;
+            margin-bottom: 72px;
         }
 
         .section-tag {
             display: inline-block;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 600;
             color: var(--orange);
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
             margin-bottom: 16px;
         }
 
         .section-title {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(40px, 6vw, 64px);
-            letter-spacing: 2px;
+            font-size: clamp(36px, 5vw, 60px);
+            letter-spacing: 3px;
         }
 
+        /* ==================== SERVICE CARDS ==================== */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+            gap: 28px;
         }
 
         .service-card {
-            background: var(--charcoal);
-            border-radius: 24px;
-            padding: 40px;
-            border: 2px solid var(--concrete);
-            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            background: var(--charcoal-warm);
+            border-radius: var(--radius-lg);
+            padding: 40px 32px;
+            border: 1px solid rgba(255,255,255,0.06);
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
             cursor: pointer;
@@ -604,151 +610,148 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
             top: 0;
             left: 0;
             right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, var(--orange) 0%, var(--accent-yellow) 100%);
-            opacity: 0;
-            transition: opacity 0.4s;
-            z-index: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--orange), var(--accent-yellow));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .service-card:hover {
-            transform: translateY(-15px) rotate(-1deg);
-            border-color: var(--orange);
+            transform: translateY(-8px);
+            border-color: rgba(255,107,53,0.2);
+            box-shadow: var(--shadow-lg);
         }
 
         .service-card:hover::before {
-            opacity: 0.1;
+            transform: scaleX(1);
         }
 
         .service-icon {
-            width: 80px;
-            height: 80px;
+            width: 72px;
+            height: 72px;
             background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
-            border-radius: 20px;
+            border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 40px;
+            font-size: 36px;
             margin-bottom: 24px;
             position: relative;
             z-index: 1;
-            transition: transform 0.4s;
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 24px rgba(255,107,53,0.2);
         }
 
         .service-card:hover .service-icon {
-            transform: scale(1.1) rotate(10deg);
-            animation: iconBounce 0.6s ease-in-out;
-        }
-
-        @keyframes iconBounce {
-            0%, 100% { transform: scale(1.1) rotate(10deg); }
-            50% { transform: scale(1.2) rotate(-5deg); }
+            transform: scale(1.08);
         }
 
         .service-card h3 {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 28px;
-            letter-spacing: 1px;
+            font-size: 26px;
+            letter-spacing: 2px;
             margin-bottom: 12px;
             position: relative;
             z-index: 1;
         }
 
         .service-card p {
-            color: var(--light-gray);
+            color: rgba(232,232,232,0.7);
             font-size: 15px;
             line-height: 1.7;
             position: relative;
             z-index: 1;
         }
 
-        /* How It Works Section */
+        /* ==================== HOW IT WORKS ==================== */
         .how-it-works {
             padding: 120px 0;
-            background: var(--charcoal);
+            background: var(--charcoal-warm);
         }
 
         .steps-grid {
             display: flex;
-            align-items: center;
+            align-items: stretch;
             justify-content: center;
             gap: 20px;
         }
 
         .step-card {
-            background: var(--steel);
-            border-radius: 24px;
-            padding: 40px 30px;
+            background: var(--steel-warm);
+            border-radius: var(--radius-lg);
+            padding: 44px 28px 36px;
             text-align: center;
-            border: 2px solid var(--concrete);
-            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            border: 1px solid rgba(255,255,255,0.06);
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             flex: 1;
             max-width: 300px;
         }
 
         .step-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--orange);
+            transform: translateY(-8px);
+            border-color: rgba(255,107,53,0.2);
+            box-shadow: var(--shadow-md);
         }
 
         .step-number {
             position: absolute;
-            top: -15px;
+            top: -16px;
             left: 50%;
             transform: translateX(-50%);
-            width: 40px;
-            height: 40px;
+            width: 36px;
+            height: 36px;
             background: var(--orange);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 20px;
+            font-size: 18px;
             color: var(--charcoal);
             font-weight: bold;
+            box-shadow: 0 4px 12px rgba(255,107,53,0.3);
         }
 
         .step-icon {
-            font-size: 50px;
-            margin-bottom: 20px;
+            font-size: 44px;
+            margin-bottom: 16px;
             display: block;
-        }
-
-        .step-card:hover .step-icon {
-            animation: iconBounce 0.6s ease-in-out;
         }
 
         .step-card h3 {
             font-family: 'Bebas Neue', sans-serif;
             font-size: 22px;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             margin-bottom: 12px;
             color: var(--orange);
         }
 
         .step-card p {
-            color: var(--light-gray);
+            color: rgba(232,232,232,0.65);
             font-size: 14px;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         .step-arrow {
-            font-size: 30px;
+            font-size: 28px;
             color: var(--orange);
-            animation: arrowPulse 1.5s ease-in-out infinite;
+            display: flex;
+            align-items: center;
+            opacity: 0.5;
+            animation: arrowPulse 2s ease-in-out infinite;
         }
 
         @keyframes arrowPulse {
-            0%, 100% { transform: translateX(0); opacity: 1; }
-            50% { transform: translateX(10px); opacity: 0.5; }
+            0%, 100% { transform: translateX(0); opacity: 0.5; }
+            50% { transform: translateX(6px); opacity: 1; }
         }
 
-        /* Imagine Transformation Section */
+        /* ==================== TRANSFORMATION ==================== */
         .transformation {
             padding: 120px 0;
-            background: var(--steel);
+            background: var(--steel-warm);
         }
 
         .transformation-visual {
@@ -758,25 +761,25 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
             gap: 0;
             max-width: 900px;
             margin: 0 auto;
-            border-radius: 24px;
+            border-radius: var(--radius-lg);
             overflow: hidden;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+            box-shadow: var(--shadow-lg);
         }
 
         .transform-before, .transform-after {
             flex: 1;
-            padding: 50px 40px;
+            padding: 48px 36px;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
         .transform-before {
-            background: linear-gradient(135deg, #8B0000 0%, #4a0000 100%);
+            background: linear-gradient(135deg, #7A1A1A 0%, #3D0D0D 100%);
         }
 
         .transform-after {
-            background: linear-gradient(135deg, var(--fun-green) 0%, #2d8a83 100%);
+            background: linear-gradient(135deg, var(--fun-green) 0%, #248078 100%);
         }
 
         .transform-content {
@@ -784,17 +787,17 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
         }
 
         .transform-emoji {
-            font-size: 70px;
+            font-size: 60px;
             display: block;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .transform-label {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 24px;
-            letter-spacing: 2px;
+            font-size: 22px;
+            letter-spacing: 3px;
             display: block;
-            margin-bottom: 25px;
+            margin-bottom: 24px;
             color: var(--off-white);
         }
 
@@ -804,13 +807,9 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
         }
 
         .transform-list li {
-            padding: 8px 0;
-            font-size: 15px;
-            color: var(--off-white);
-        }
-
-        .transform-list.bad li {
-            opacity: 0.9;
+            padding: 7px 0;
+            font-size: 14px;
+            color: rgba(255,255,255,0.9);
         }
 
         .transform-list.good li {
@@ -818,95 +817,97 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
         }
 
         .transform-arrow {
-            background: var(--charcoal);
-            padding: 30px 25px;
+            background: var(--charcoal-warm);
+            padding: 28px 24px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 8px;
         }
 
         .transform-arrow span:first-child {
-            font-size: 50px;
-            animation: bearBounce 2s ease-in-out infinite;
+            font-size: 44px;
+            animation: bearBounce 3s ease-in-out infinite;
         }
 
         .arrow-text {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 14px;
-            letter-spacing: 2px;
+            font-size: 13px;
+            letter-spacing: 3px;
             color: var(--orange);
             text-align: center;
-            line-height: 1.4;
+            line-height: 1.5;
         }
 
-        /* Pricing Section */
+        /* ==================== PRICING ==================== */
         .pricing {
             padding: 120px 0;
-            background: var(--steel);
+            background: var(--steel-warm);
         }
 
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
+            gap: 20px;
         }
 
         .pricing-card {
-            background: var(--charcoal);
-            border-radius: 24px;
-            padding: 36px 28px;
-            border: 2px solid var(--concrete);
-            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            background: var(--charcoal-warm);
+            border-radius: var(--radius-lg);
+            padding: 36px 24px;
+            border: 1px solid rgba(255,255,255,0.06);
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
         }
 
         .pricing-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            border-color: var(--orange);
+            transform: translateY(-8px);
+            border-color: rgba(255,107,53,0.2);
+            box-shadow: var(--shadow-lg);
         }
 
         .pricing-card.featured {
-            border-color: var(--orange);
-            transform: scale(1.05);
-            background: linear-gradient(135deg, var(--charcoal) 0%, rgba(255,107,53,0.1) 100%);
+            border-color: rgba(255,107,53,0.4);
+            transform: scale(1.03);
+            background: linear-gradient(165deg, var(--charcoal-warm) 0%, rgba(255,107,53,0.06) 100%);
+            box-shadow: 0 8px 40px rgba(255,107,53,0.15);
         }
 
         .pricing-card.featured:hover {
-            transform: scale(1.08) translateY(-5px);
+            transform: scale(1.05) translateY(-4px);
         }
 
         .pricing-card.featured::before {
-            content: '🔥 MOST POPULAR';
+            content: 'MOST POPULAR';
             position: absolute;
             top: -12px;
             left: 50%;
             transform: translateX(-50%);
             background: linear-gradient(135deg, var(--orange) 0%, var(--accent-yellow) 100%);
             color: var(--charcoal);
-            padding: 6px 16px;
-            border-radius: 100px;
-            font-size: 11px;
+            padding: 6px 18px;
+            border-radius: var(--radius-full);
+            font-size: 10px;
             font-weight: 700;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             white-space: nowrap;
         }
 
         .pricing-emoji {
-            font-size: 48px;
-            margin-bottom: 15px;
+            font-size: 44px;
+            margin-bottom: 16px;
             display: block;
-            transition: transform 0.4s;
+            transition: transform 0.35s;
         }
 
         .pricing-card:hover .pricing-emoji {
-            transform: scale(1.2) rotate(10deg);
+            transform: scale(1.15);
         }
 
         .pricing-name {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 24px;
+            font-size: 22px;
             letter-spacing: 2px;
             color: var(--orange);
             margin-bottom: 8px;
@@ -914,22 +915,23 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
 
         .pricing-price {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 56px;
+            font-size: 52px;
             letter-spacing: 1px;
             margin-bottom: 8px;
         }
 
         .pricing-price span {
             font-size: 20px;
-            color: var(--light-gray);
+            color: rgba(232,232,232,0.5);
         }
 
         .pricing-desc {
-            color: var(--light-gray);
+            color: rgba(232,232,232,0.6);
             font-size: 14px;
             padding-bottom: 20px;
-            border-bottom: 1px solid var(--concrete);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
             margin-bottom: 20px;
+            line-height: 1.6;
         }
 
         .pricing-features {
@@ -938,9 +940,9 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
         }
 
         .pricing-features li {
-            padding: 10px 0;
+            padding: 8px 0;
             font-size: 14px;
-            color: var(--light-gray);
+            color: rgba(232,232,232,0.7);
             display: flex;
             align-items: center;
             gap: 10px;
@@ -950,21 +952,23 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
             content: '✓';
             color: var(--orange);
             font-weight: 700;
+            font-size: 13px;
         }
 
         .pricing-cta {
             width: 100%;
-            padding: 16px;
+            padding: 14px;
             background: transparent;
-            border: 2px solid var(--concrete);
+            border: 1px solid rgba(255,255,255,0.1);
             color: var(--off-white);
-            border-radius: 100px;
+            border-radius: var(--radius-full);
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 13px;
+            letter-spacing: 1.5px;
+            font-size: 12px;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-family: 'Barlow', sans-serif;
         }
 
         .pricing-cta:hover,
@@ -972,15 +976,31 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
             background: var(--orange);
             border-color: var(--orange);
             color: var(--charcoal);
-            transform: scale(1.05);
+            box-shadow: var(--shadow-orange);
         }
 
-        /* Why Us Section */
+        .pricing-card.featured .pricing-cta:hover {
+            background: #FF7D4D;
+            transform: translateY(-2px);
+        }
+
+        /* ==================== WHY US ==================== */
         .differentiator {
             padding: 100px 0;
             background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
             position: relative;
             overflow: hidden;
+        }
+
+        .differentiator::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
         }
 
         .diff-content {
@@ -994,17 +1014,19 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
 
         .diff-text h2 {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(36px, 5vw, 56px);
+            font-size: clamp(36px, 5vw, 52px);
             color: var(--charcoal);
             letter-spacing: 2px;
             margin-bottom: 20px;
+            line-height: 1.05;
         }
 
         .diff-text p {
-            font-size: 18px;
+            font-size: 17px;
             color: var(--charcoal);
-            opacity: 0.85;
-            margin-bottom: 30px;
+            opacity: 0.8;
+            margin-bottom: 32px;
+            line-height: 1.7;
         }
 
         .diff-stats {
@@ -1018,30 +1040,31 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
 
         .diff-stat-number {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 48px;
+            font-size: 44px;
             color: var(--charcoal);
         }
 
         .diff-stat-label {
-            font-size: 13px;
+            font-size: 12px;
             color: var(--charcoal);
-            opacity: 0.7;
+            opacity: 0.65;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
         }
 
         .diff-visual {
-            background: var(--charcoal);
-            border-radius: 24px;
-            padding: 40px;
+            background: var(--charcoal-warm);
+            border-radius: var(--radius-lg);
+            padding: 36px;
+            box-shadow: var(--shadow-lg);
         }
 
         .comparison-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
-            border-bottom: 1px solid var(--concrete);
+            padding: 18px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
         }
 
         .comparison-item:last-child {
@@ -1058,12 +1081,15 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
             gap: 30px;
         }
 
-        .comp-them, .comp-us {
+        .comp-us {
             text-align: center;
             min-width: 80px;
+            color: var(--orange);
+            font-weight: 700;
+            font-size: 16px;
         }
 
-        .comp-them span, .comp-us span {
+        .comp-us span {
             display: block;
             font-size: 11px;
             text-transform: uppercase;
@@ -1071,15 +1097,10 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
             margin-bottom: 4px;
         }
 
-        .comp-them span { color: var(--light-gray); }
-        .comp-us span { color: var(--orange); }
-        .comp-them { color: var(--light-gray); font-weight: 600; }
-        .comp-us { color: var(--orange); font-weight: 700; font-size: 18px; }
-
-        /* Contact Section */
+        /* ==================== CONTACT ==================== */
         .contact {
             padding: 120px 0;
-            background: var(--charcoal);
+            background: var(--charcoal-warm);
         }
 
         .contact-grid {
@@ -1090,71 +1111,80 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
 
         .contact-info h2 {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(40px, 5vw, 56px);
+            font-size: clamp(36px, 5vw, 52px);
             letter-spacing: 2px;
             margin-bottom: 20px;
+            line-height: 1.1;
         }
 
         .contact-info p {
-            color: var(--light-gray);
-            font-size: 18px;
+            color: rgba(232,232,232,0.7);
+            font-size: 17px;
             margin-bottom: 40px;
+            line-height: 1.7;
         }
 
         .contact-methods {
             display: flex;
             flex-direction: column;
-            gap: 24px;
+            gap: 16px;
         }
 
         .contact-method {
             display: flex;
             align-items: center;
             gap: 16px;
-            padding: 20px;
-            background: var(--steel);
-            border-radius: 16px;
-            transition: all 0.3s;
+            padding: 18px 20px;
+            background: var(--steel-warm);
+            border-radius: var(--radius-md);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             cursor: pointer;
+            border: 1px solid rgba(255,255,255,0.04);
         }
 
         .contact-method:hover {
             background: var(--concrete);
-            transform: translateX(10px);
+            transform: translateX(8px);
+            border-color: rgba(255,107,53,0.15);
         }
 
         .contact-icon {
-            width: 50px;
-            height: 50px;
+            width: 48px;
+            height: 48px;
             background: var(--orange);
-            border-radius: 12px;
+            border-radius: var(--radius-sm);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
+            font-size: 22px;
+            flex-shrink: 0;
             transition: transform 0.3s;
         }
 
         .contact-method:hover .contact-icon {
-            transform: rotate(10deg) scale(1.1);
+            transform: scale(1.08);
         }
 
         .contact-method-text {
-            font-size: 14px;
-            color: var(--light-gray);
+            font-size: 13px;
+            color: rgba(232,232,232,0.5);
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .contact-method-value {
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 600;
             color: var(--off-white);
         }
 
+        /* ==================== FORM ==================== */
         .contact-form {
-            background: var(--steel);
-            border-radius: 24px;
+            background: var(--steel-warm);
+            border-radius: var(--radius-lg);
             padding: 40px;
-            border: 2px solid var(--concrete);
+            border: 1px solid rgba(255,255,255,0.06);
+            box-shadow: var(--shadow-md);
         }
 
         .form-group {
@@ -1163,26 +1193,31 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
 
         .form-group label {
             display: block;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             margin-bottom: 8px;
-            color: var(--light-gray);
+            color: rgba(232,232,232,0.6);
         }
 
         .form-group input,
         .form-group select,
         .form-group textarea {
             width: 100%;
-            padding: 16px;
-            background: var(--charcoal);
-            border: 2px solid var(--concrete);
-            border-radius: 12px;
+            padding: 14px 16px;
+            background: var(--charcoal-warm);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: var(--radius-sm);
             color: var(--off-white);
             font-family: 'Barlow', sans-serif;
             font-size: 15px;
-            transition: all 0.3s;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(232,232,232,0.25);
         }
 
         .form-group input:focus,
@@ -1190,12 +1225,21 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
         .form-group textarea:focus {
             outline: none;
             border-color: var(--orange);
-            box-shadow: 0 0 20px rgba(255,107,53,0.2);
+            box-shadow: 0 0 0 3px rgba(255,107,53,0.12);
         }
 
         .form-group textarea {
             resize: vertical;
-            min-height: 120px;
+            min-height: 110px;
+        }
+
+        .form-group select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23E8E8E8' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            padding-right: 40px;
         }
 
         .form-row {
@@ -1206,49 +1250,49 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
 
         .form-submit {
             width: 100%;
-            padding: 18px;
-            background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
+            padding: 16px;
+            background: var(--orange);
             border: none;
-            border-radius: 100px;
-            color: var(--off-white);
+            border-radius: var(--radius-full);
+            color: var(--charcoal);
             font-family: 'Barlow', sans-serif;
             font-weight: 700;
             font-size: 15px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             cursor: pointer;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow-orange);
         }
 
         .form-submit:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(255,107,53,0.4);
+            background: #FF7D4D;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(255,107,53,0.4);
         }
 
         .form-submit:active {
-            transform: scale(0.98);
+            transform: translateY(0);
         }
 
-        /* Footer */
+        /* ==================== FOOTER ==================== */
         footer {
-            padding: 60px 0 30px;
-            background: var(--steel);
-            border-top: 1px solid var(--concrete);
+            padding: 48px 0 24px;
+            background: var(--steel-warm);
+            border-top: 1px solid rgba(255,255,255,0.06);
         }
 
         .footer-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 40px;
+            margin-bottom: 32px;
         }
 
         .footer-logo {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 24px;
-            letter-spacing: 2px;
+            font-size: 22px;
+            letter-spacing: 3px;
             color: var(--off-white);
             display: flex;
             align-items: center;
@@ -1256,18 +1300,20 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
         }
 
         .footer-logo span {
-            font-size: 30px;
+            font-size: 28px;
         }
 
         .footer-links {
             display: flex;
-            gap: 30px;
+            gap: 28px;
         }
 
         .footer-links a {
-            color: var(--light-gray);
+            color: rgba(232,232,232,0.5);
             text-decoration: none;
-            font-size: 14px;
+            font-size: 13px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
             transition: color 0.2s;
         }
 
@@ -1277,20 +1323,19 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
 
         .footer-bottom {
             text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid var(--concrete);
-            color: var(--light-gray);
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            color: rgba(232,232,232,0.4);
             font-size: 13px;
         }
 
         .service-area {
-            margin-top: 10px;
+            margin-top: 8px;
             font-size: 12px;
-            color: var(--light-gray);
-            opacity: 0.7;
+            color: rgba(232,232,232,0.3);
         }
 
-        /* Chatbot */
+        /* ==================== CHATBOT ==================== */
         .chatbot {
             position: fixed;
             bottom: 24px;
@@ -1299,8 +1344,8 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
         }
 
         .chatbot-toggle {
-            width: 70px;
-            height: 70px;
+            width: 64px;
+            height: 64px;
             border-radius: 50%;
             background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
             border: none;
@@ -1308,35 +1353,29 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 36px;
-            box-shadow: 0 10px 30px rgba(255,107,53,0.4);
-            transition: all 0.3s;
-            animation: chatBounce 2s ease-in-out infinite;
-        }
-
-        @keyframes chatBounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+            font-size: 32px;
+            box-shadow: 0 8px 32px rgba(255,107,53,0.35);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .chatbot-toggle:hover {
-            transform: scale(1.1);
-            animation: none;
+            transform: scale(1.08) translateY(-2px);
+            box-shadow: 0 12px 40px rgba(255,107,53,0.45);
         }
 
         .chatbot-window {
             position: absolute;
-            bottom: 90px;
+            bottom: 80px;
             right: 0;
             width: 380px;
             max-height: 500px;
-            background: var(--steel);
-            border-radius: 24px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+            background: var(--steel-warm);
+            border-radius: var(--radius-lg);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
             display: none;
             flex-direction: column;
             overflow: hidden;
-            border: 2px solid var(--concrete);
+            border: 1px solid rgba(255,255,255,0.08);
         }
 
         .chatbot-window.open {
@@ -1345,32 +1384,32 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
         }
 
         @keyframes slideUp {
-            from { opacity: 0; transform: translateY(20px); }
+            from { opacity: 0; transform: translateY(16px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
         .chatbot-header {
             background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
-            padding: 20px;
+            padding: 18px 20px;
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 14px;
         }
 
         .chatbot-avatar {
-            font-size: 40px;
+            font-size: 36px;
         }
 
         .chatbot-header-text h4 {
             font-family: 'Bebas Neue', sans-serif;
             font-size: 20px;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             color: var(--off-white);
         }
 
         .chatbot-header-text p {
-            font-size: 13px;
-            color: rgba(255,255,255,0.8);
+            font-size: 12px;
+            color: rgba(255,255,255,0.75);
         }
 
         .chatbot-close {
@@ -1378,10 +1417,11 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
             background: none;
             border: none;
             color: var(--off-white);
-            font-size: 24px;
+            font-size: 22px;
             cursor: pointer;
-            opacity: 0.8;
+            opacity: 0.7;
             transition: opacity 0.2s;
+            padding: 4px;
         }
 
         .chatbot-close:hover {
@@ -1394,26 +1434,41 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
             overflow-y: auto;
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 12px;
             max-height: 300px;
+            scrollbar-width: thin;
+            scrollbar-color: var(--concrete) transparent;
+        }
+
+        .chatbot-messages::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .chatbot-messages::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .chatbot-messages::-webkit-scrollbar-thumb {
+            background: var(--concrete);
+            border-radius: 4px;
         }
 
         .chat-message {
             max-width: 85%;
-            padding: 12px 18px;
-            border-radius: 18px;
+            padding: 12px 16px;
+            border-radius: 16px;
             font-size: 14px;
-            line-height: 1.5;
+            line-height: 1.6;
             animation: messageIn 0.3s ease-out;
         }
 
         @keyframes messageIn {
-            from { opacity: 0; transform: scale(0.8); }
-            to { opacity: 1; transform: scale(1); }
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .chat-message.bot {
-            background: var(--concrete);
+            background: rgba(255,255,255,0.06);
             color: var(--off-white);
             align-self: flex-start;
             border-bottom-left-radius: 4px;
@@ -1427,32 +1482,32 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
         }
 
         .chatbot-options {
-            padding: 15px 20px;
+            padding: 14px 18px;
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            border-top: 1px solid var(--concrete);
+            gap: 8px;
+            border-top: 1px solid rgba(255,255,255,0.06);
         }
 
         .chat-option {
-            padding: 10px 16px;
-            background: var(--charcoal);
-            border: 1px solid var(--concrete);
-            border-radius: 100px;
+            padding: 8px 14px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: var(--radius-full);
             color: var(--off-white);
-            font-size: 13px;
+            font-size: 12px;
             cursor: pointer;
             transition: all 0.2s;
+            font-family: 'Barlow', sans-serif;
         }
 
         .chat-option:hover {
             background: var(--orange);
             color: var(--charcoal);
             border-color: var(--orange);
-            transform: scale(1.05);
         }
 
-        /* Confetti */
+        /* ==================== CONFETTI ==================== */
         .confetti {
             position: fixed;
             top: 0;
@@ -1476,13 +1531,25 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
             100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
         }
 
-        /* Responsive */
+        /* ==================== SCROLL REVEAL ==================== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ==================== RESPONSIVE ==================== */
         @media (max-width: 1024px) {
             .hero-content,
             .diff-content,
             .contact-grid {
                 grid-template-columns: 1fr;
-                gap: 60px;
+                gap: 48px;
             }
 
             .pricing-grid {
@@ -1511,13 +1578,17 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
 
             .transform-arrow {
                 flex-direction: row;
-                padding: 20px;
+                padding: 16px;
             }
         }
 
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
+            }
+
+            .hamburger {
+                display: flex;
             }
 
             .pricing-grid,
@@ -1527,6 +1598,12 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
 
             .hero-ctas {
                 flex-direction: column;
+            }
+
+            .hero-ctas .btn-primary,
+            .hero-ctas .btn-secondary {
+                text-align: center;
+                justify-content: center;
             }
 
             .form-row {
@@ -1539,7 +1616,7 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
 
             .footer-content {
                 flex-direction: column;
-                gap: 30px;
+                gap: 24px;
                 text-align: center;
             }
 
@@ -1549,27 +1626,11 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
             }
 
             .container {
-                padding: 0 16px;
+                padding: 0 20px;
             }
 
             .hero {
                 padding: 100px 0 60px;
-            }
-
-            .hero h1 {
-                font-size: 42px;
-            }
-
-            .slider-container {
-                height: 400px;
-            }
-
-            .slider-emoji {
-                font-size: 60px;
-            }
-
-            .slider-side {
-                font-size: 32px;
             }
 
             .chatbot-window {
@@ -1579,15 +1640,11 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
 
             .steps-grid {
                 flex-direction: column;
-                gap: 30px;
+                gap: 28px;
             }
 
             .step-card {
                 max-width: 100%;
-            }
-
-            .step-arrow {
-                display: none;
             }
 
             .transformation-visual {
@@ -1596,42 +1653,38 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
 
             .transform-arrow {
                 flex-direction: row;
-                padding: 15px;
+                padding: 14px;
             }
 
             .transform-before, .transform-after {
-                padding: 30px 20px;
-            }
-
-            .transform-emoji {
-                font-size: 50px;
-            }
-
-            .transform-label {
-                font-size: 20px;
+                padding: 32px 24px;
             }
 
             .how-it-works, .transformation {
+                padding: 80px 0;
+            }
+
+            .services, .pricing, .contact {
                 padding: 80px 0;
             }
         }
 
         @media (max-width: 480px) {
             .container {
-                padding: 0 12px;
+                padding: 0 16px;
             }
 
             .logo {
-                font-size: 18px;
+                font-size: 20px;
             }
 
             .logo-bear {
-                font-size: 28px;
+                font-size: 26px;
             }
 
             .nav-cta {
-                padding: 10px 16px;
-                font-size: 12px;
+                padding: 10px 18px;
+                font-size: 11px;
             }
 
             .hero {
@@ -1640,7 +1693,7 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
             }
 
             .hero h1 {
-                font-size: 32px;
+                font-size: 36px;
                 margin-bottom: 16px;
             }
 
@@ -1650,16 +1703,16 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
             }
 
             .hero-subtitle {
-                font-size: 14px;
+                font-size: 15px;
             }
 
             .btn-primary, .btn-secondary {
-                padding: 14px 24px;
-                font-size: 13px;
+                padding: 15px 24px;
+                font-size: 14px;
             }
 
             .mess-meter-card {
-                padding: 24px;
+                padding: 24px 18px;
             }
 
             .mess-meter-title {
@@ -1667,7 +1720,7 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
             }
 
             .mess-option {
-                padding: 12px 15px;
+                padding: 12px 14px;
             }
 
             .mess-emoji {
@@ -1687,29 +1740,53 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
             }
 
             .section-title {
-                font-size: 28px;
+                font-size: 30px;
             }
 
-            .services, .pricing, .contact, .transformation {
-                padding: 60px 0;
+            .section-header {
+                margin-bottom: 48px;
+            }
+
+            .services, .pricing, .contact, .transformation, .how-it-works {
+                padding: 64px 0;
             }
 
             .service-card, .pricing-card {
-                padding: 24px;
+                padding: 28px 20px;
             }
 
             .pricing-price {
                 font-size: 42px;
             }
 
-            .slider-container {
-                height: 350px;
+            .chatbot-toggle {
+                width: 56px;
+                height: 56px;
+                font-size: 26px;
             }
 
-            .chatbot-toggle {
-                width: 60px;
-                height: 60px;
-                font-size: 28px;
+            .contact-form {
+                padding: 28px 20px;
+            }
+
+            .transform-emoji {
+                font-size: 48px;
+            }
+
+            .transform-label {
+                font-size: 18px;
+            }
+
+            .diff-text h2 {
+                font-size: 32px;
+            }
+
+            .diff-stats {
+                gap: 24px;
+            }
+
+            .diff-stat-number {
+                font-size: 36px;
             }
         }
     </style>
@@ -1737,8 +1814,21 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <a href="#contact" class="nav-cta">Get Free Quote</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#services" class="mobile-menu-link">Services</a>
+        <a href="#how-it-works" class="mobile-menu-link">How It Works</a>
+        <a href="#pricing" class="mobile-menu-link">Pricing</a>
+        <a href="#contact" class="mobile-menu-link">Contact</a>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -1810,22 +1900,22 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
     <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <span class="section-tag">What We Do</span>
                 <h2 class="section-title">GARAGE TRANSFORMATION SERVICES</h2>
             </div>
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card reveal">
                     <div class="service-icon">🧹</div>
                     <h3>GARAGE CLEANUP</h3>
                     <p>We deep clean your garage from top to bottom. Sweep, dust, clear out the cobwebs, and get rid of years of accumulated grime. Start fresh with a space you're proud of.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card reveal">
                     <div class="service-icon">📦</div>
                     <h3>ORGANIZATION</h3>
                     <p>Strategic organization that maximizes your space. We sort, categorize, and arrange everything so you can actually find what you need—and maybe even park your car again.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card reveal">
                     <div class="service-icon">🚛</div>
                     <h3>WE HAUL THE JUNK</h3>
                     <p>Don't want it anymore? We'll take it. As part of your cleanup, we haul away anything you no longer need—no extra hauling fees, no hassle. Just point and it's gone.</p>
@@ -1837,26 +1927,26 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
     <!-- How It Works Section -->
     <section class="how-it-works" id="how-it-works">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <span class="section-tag">Simple Process</span>
                 <h2 class="section-title">HOW IT WORKS</h2>
             </div>
             <div class="steps-grid">
-                <div class="step-card">
+                <div class="step-card reveal">
                     <div class="step-number">1</div>
                     <div class="step-icon">📱</div>
                     <h3>BOOK YOUR SLOT</h3>
                     <p>Fill out our quick form or give us a call. We'll get back to you within 24 hours to schedule your weekend appointment.</p>
                 </div>
                 <div class="step-arrow">→</div>
-                <div class="step-card">
+                <div class="step-card reveal">
                     <div class="step-number">2</div>
                     <div class="step-icon">🐻</div>
                     <h3>WE GET TO WORK</h3>
                     <p>We show up, roll up our sleeves, and transform your garage. You tell us what stays and what goes—we handle the rest.</p>
                 </div>
                 <div class="step-arrow">→</div>
-                <div class="step-card">
+                <div class="step-card reveal">
                     <div class="step-number">3</div>
                     <div class="step-icon">🚗</div>
                     <h3>ENJOY YOUR SPACE</h3>
@@ -1869,11 +1959,11 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
     <!-- Imagine the Transformation Section -->
     <section class="transformation" id="transformation">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <span class="section-tag">The Possibilities</span>
                 <h2 class="section-title">IMAGINE THE TRANSFORMATION</h2>
             </div>
-            <div class="transformation-visual">
+            <div class="transformation-visual reveal">
                 <div class="transform-before">
                     <div class="transform-content">
                         <span class="transform-emoji">😱</span>
@@ -1909,12 +1999,12 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
     <!-- Pricing Section -->
     <section class="pricing" id="pricing">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <span class="section-tag">Transparent Pricing</span>
                 <h2 class="section-title">FLAT-RATE PACKAGES</h2>
             </div>
             <div class="pricing-grid">
-                <div class="pricing-card">
+                <div class="pricing-card reveal">
                     <span class="pricing-emoji">🐻</span>
                     <div class="pricing-name">GRIZZ LIGHT</div>
                     <div class="pricing-price">$325</div>
@@ -1928,7 +2018,7 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
                     </ul>
                     <button class="pricing-cta">Book Now</button>
                 </div>
-                <div class="pricing-card featured">
+                <div class="pricing-card featured reveal">
                     <span class="pricing-emoji">💪</span>
                     <div class="pricing-name">GRIZZ STANDARD</div>
                     <div class="pricing-price">$475</div>
@@ -1942,7 +2032,7 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
                     </ul>
                     <button class="pricing-cta">Book Now</button>
                 </div>
-                <div class="pricing-card">
+                <div class="pricing-card reveal">
                     <span class="pricing-emoji">🔥</span>
                     <div class="pricing-name">GRIZZ DEEP</div>
                     <div class="pricing-price">$625</div>
@@ -1956,7 +2046,7 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
                     </ul>
                     <button class="pricing-cta">Book Now</button>
                 </div>
-                <div class="pricing-card">
+                <div class="pricing-card reveal">
                     <span class="pricing-emoji">🚀</span>
                     <div class="pricing-name">GRIZZ TOTAL</div>
                     <div class="pricing-price">$800<span>+</span></div>
@@ -2027,7 +2117,7 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container contact-grid">
-            <div class="contact-info">
+            <div class="contact-info reveal">
                 <h2>LET'S TRANSFORM YOUR GARAGE 🐻</h2>
                 <p>Ready to reclaim your space? Get a free quote and let's schedule your garage transformation. Weekend appointments available!</p>
                 <div class="contact-methods">
@@ -2054,7 +2144,7 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
                     </div>
                 </div>
             </div>
-            <div class="contact-form">
+            <div class="contact-form reveal">
                 <form id="quote-form">
                     <div class="form-row">
                         <div class="form-group">
@@ -2074,18 +2164,18 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
                         <label for="garage-size">Garage Size</label>
                         <select id="garage-size" name="garage-size" required>
                             <option value="">Select your garage size</option>
-                            <option value="1-car-light">1-Car Garage (Light Clutter) 😊</option>
-                            <option value="1-car-heavy">1-Car Garage (Heavy Clutter) 😅</option>
-                            <option value="2-car">2-Car Garage 😰</option>
-                            <option value="3-car">3-Car Garage 🤯</option>
-                            <option value="extreme">Extreme / Not Sure 💀</option>
+                            <option value="1-car-light">1-Car Garage (Light Clutter)</option>
+                            <option value="1-car-heavy">1-Car Garage (Heavy Clutter)</option>
+                            <option value="2-car">2-Car Garage</option>
+                            <option value="3-car">3-Car Garage</option>
+                            <option value="extreme">Extreme / Not Sure</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="message">Tell Us About Your Garage</label>
-                        <textarea id="message" name="message" placeholder="How bad is it? Be honest... we've seen it all! 🐻"></textarea>
+                        <textarea id="message" name="message" placeholder="How bad is it? Be honest... we've seen it all!"></textarea>
                     </div>
-                    <button type="submit" class="form-submit">🎉 Get My Free Quote</button>
+                    <button type="submit" class="form-submit">Get My Free Quote</button>
                 </form>
             </div>
         </div>
@@ -2104,7 +2194,7 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 GrizzFlow's Garage. All rights reserved. Locally owned and operated in the South Bay. 🐻💪</p>
+                <p>&copy; 2026 GrizzFlow's Garage. All rights reserved. Locally owned and operated in the South Bay.</p>
                 <p class="service-area">Serving: Hermosa Beach, Manhattan Beach, Redondo Beach, Torrance, El Segundo, Palos Verdes, Hawthorne, Gardena, and surrounding South Bay areas</p>
             </div>
         </div>
@@ -2122,13 +2212,13 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
                 <button class="chatbot-close" onclick="toggleChat()">×</button>
             </div>
             <div class="chatbot-messages" id="chatMessages">
-                <div class="chat-message bot">Hey there! 👋 I'm Grizz! Got questions about garage cleanouts? I'm here to help!</div>
+                <div class="chat-message bot">Hey there! I'm Grizz! Got questions about garage cleanouts? I'm here to help!</div>
             </div>
             <div class="chatbot-options" id="chatOptions">
-                <button class="chat-option" onclick="askQuestion('pricing')">💰 Pricing?</button>
-                <button class="chat-option" onclick="askQuestion('areas')">📍 Service areas?</button>
-                <button class="chat-option" onclick="askQuestion('junk')">🚛 Haul away stuff?</button>
-                <button class="chat-option" onclick="askQuestion('schedule')">📅 Scheduling?</button>
+                <button class="chat-option" onclick="askQuestion('pricing')">Pricing?</button>
+                <button class="chat-option" onclick="askQuestion('areas')">Service areas?</button>
+                <button class="chat-option" onclick="askQuestion('junk')">Haul away stuff?</button>
+                <button class="chat-option" onclick="askQuestion('schedule')">Scheduling?</button>
             </div>
         </div>
         <button class="chatbot-toggle" onclick="toggleChat()" id="chatToggle">🐻</button>
@@ -2148,22 +2238,38 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
             }
         });
 
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('open');
+            document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.mobile-menu-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('open');
+                document.body.style.overflow = '';
+            });
+        });
+
         // Logo bear interaction
         const logoBear = document.getElementById('logoBear');
         logoBear.addEventListener('click', () => {
             logoBear.style.animation = 'none';
-            logoBear.offsetHeight; // Trigger reflow
+            logoBear.offsetHeight;
             logoBear.style.animation = 'bearWave 0.5s ease-in-out';
         });
 
         // Mess meter selection
         function selectMess(element) {
-            // Remove selected from all
             document.querySelectorAll('.mess-option').forEach(opt => opt.classList.remove('selected'));
-            // Add selected to clicked
             element.classList.add('selected');
 
-            // Show result
             const result = document.getElementById('messResult');
             const resultLevel = document.getElementById('messResultLevel');
             const resultDesc = document.getElementById('messResultDesc');
@@ -2172,10 +2278,10 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
             const price = element.dataset.price;
 
             const messages = {
-                light: { level: "Easy peasy! 🐻", desc: `Starting at just ${price} - we'll have it done in no time!` },
-                medium: { level: "No sweat! 💪", desc: `At ${price}, we'll get your car back in the garage!` },
-                heavy: { level: "Challenge accepted! 🔥", desc: `${price} to transform your space completely!` },
-                extreme: { level: "We LIVE for this! 🚀", desc: `${price} for the ultimate garage makeover!` }
+                light: { level: "Easy peasy!", desc: `Starting at just ${price} - we'll have it done in no time!` },
+                medium: { level: "No sweat!", desc: `At ${price}, we'll get your car back in the garage!` },
+                heavy: { level: "Challenge accepted!", desc: `${price} to transform your space completely!` },
+                extreme: { level: "We LIVE for this!", desc: `${price} for the ultimate garage makeover!` }
             };
 
             resultLevel.textContent = messages[level].level;
@@ -2186,14 +2292,11 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
         // Chatbot
         function toggleChat() {
             const chatWindow = document.getElementById('chatWindow');
-            const chatToggle = document.getElementById('chatToggle');
             chatWindow.classList.toggle('open');
-            chatToggle.style.animation = 'none';
         }
 
         function askQuestion(topic) {
             const messages = document.getElementById('chatMessages');
-            const options = document.getElementById('chatOptions');
 
             const questions = {
                 pricing: "What are your prices?",
@@ -2203,10 +2306,10 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
             };
 
             const answers = {
-                pricing: "Great question! 💰 Our garage cleanup packages start at $325 for light jobs and go up to $800+ for major transformations. That includes cleaning, organizing, AND hauling away whatever you don't want!",
-                areas: "We serve the entire South Bay! 📍 That includes Hermosa Beach, Manhattan Beach, Redondo Beach, Torrance, El Segundo, Palos Verdes, Hawthorne, Gardena, and surrounding areas. If you're nearby, we've got you covered!",
-                junk: "Absolutely! 🚛 As part of your garage cleanup, we'll haul away anything you no longer want—no extra fees. Old furniture, broken stuff, random boxes... just point and it's gone! Note: We focus on garages, not whole-house cleanouts.",
-                schedule: "Easy! 📅 We're available weekends and can usually book within the same week. Just fill out the quote form or give us a call at (509) 860-9850. We'll get back to you within 24 hours!"
+                pricing: "Great question! Our garage cleanup packages start at $325 for light jobs and go up to $800+ for major transformations. That includes cleaning, organizing, AND hauling away whatever you don't want!",
+                areas: "We serve the entire South Bay! That includes Hermosa Beach, Manhattan Beach, Redondo Beach, Torrance, El Segundo, Palos Verdes, Hawthorne, Gardena, and surrounding areas. If you're nearby, we've got you covered!",
+                junk: "Absolutely! As part of your garage cleanup, we'll haul away anything you no longer want—no extra fees. Old furniture, broken stuff, random boxes... just point and it's gone! Note: We focus on garages, not whole-house cleanouts.",
+                schedule: "Easy! We're available weekends and can usually book within the same week. Just fill out the quote form or give us a call at (509) 860-9850. We'll get back to you within 24 hours!"
             };
 
             // Add user message
@@ -2232,7 +2335,7 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
             const confettiContainer = document.getElementById('confetti');
             const colors = ['#FF6B35', '#FFD23F', '#4ECDC4', '#9B59B6', '#E8E8E8'];
 
-            for (let i = 0; i < 100; i++) {
+            for (let i = 0; i < 80; i++) {
                 const confetti = document.createElement('div');
                 confetti.className = 'confetti-piece';
                 confetti.style.left = Math.random() * 100 + '%';
@@ -2255,11 +2358,9 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
             const data = Object.fromEntries(formData);
             console.log('Form submitted:', data);
 
-            // Create confetti celebration
             createConfetti();
 
-            // Show success message
-            alert('🎉 Awesome! Thanks for reaching out! We\'ll get back to you within 24 hours with your free quote. Get ready to reclaim your garage!');
+            alert('Awesome! Thanks for reaching out! We\'ll get back to you within 24 hours with your free quote. Get ready to reclaim your garage!');
             this.reset();
         });
 
@@ -2286,2265 +2387,22 @@ mosa Beach, Manhattan Beach, Redondo Beach, Torrance & more.">
             });
         });
 
-        // Intersection Observer for scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
+        // Scroll reveal animation
+        const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0) rotate(0deg)';
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
                 }
             });
-        }, observerOptions);
-
-        document.querySelectorAll('.service-card, .pricing-card').forEach((el, index) => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(50px)';
-            el.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
-            observer.observe(el);
-        });
-    </script>
-</body>
-</html>
-
-            --steel: #2D2D2D;
-            --concrete: #3A3A3A;
-            --light-gray: #E8E8E8;
-            --off-white: #F5F5F0;
-            --accent-yellow: #FFD23F;
-            --fun-green: #4ECDC4;
-            --fun-purple: #9B59B6;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Barlow', sans-serif;
-            background: var(--charcoal);
-            color: var(--off-white);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* Fun cursor trail */
-        .cursor-trail {
-            position: fixed;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9999;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: 20px 0;
-            background: linear-gradient(to bottom, rgba(26,26,26,0.95) 0%, rgba(26,26,26,0) 100%);
-            transition: background 0.3s ease;
-        }
-
-        nav.scrolled {
-            background: rgba(26,26,26,0.98);
-            backdrop-filter: blur(10px);
-        }
-
-        .nav-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 28px;
-            letter-spacing: 2px;
-            color: var(--off-white);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo-bear {
-            font-size: 36px;
-            animation: bearBounce 2s ease-in-out infinite;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-
-        .logo-bear:hover {
-            animation: bearWave 0.5s ease-in-out;
-        }
-
-        @keyframes bearBounce {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            25% { transform: translateY(-5px) rotate(-5deg); }
-            75% { transform: translateY(-5px) rotate(5deg); }
-        }
-
-        @keyframes bearWave {
-            0%, 100% { transform: rotate(0deg) scale(1); }
-            25% { transform: rotate(-20deg) scale(1.2); }
-            75% { transform: rotate(20deg) scale(1.2); }
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 40px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--light-gray);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 14px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            transition: all 0.3s;
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 3px;
-            background: var(--orange);
-            transition: width 0.3s;
-            border-radius: 2px;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .nav-links a:hover {
-            color: var(--orange);
-            transform: translateY(-2px);
-        }
-
-        .nav-cta {
-            background: var(--orange);
-            color: var(--charcoal);
-            padding: 12px 28px;
-            border-radius: 100px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 14px;
-            text-decoration: none;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .nav-cta::before {
-            content: '🐻';
-            position: absolute;
-            left: -30px;
-            transition: left 0.3s;
-        }
-
-        .nav-cta:hover::before {
-            left: 10px;
-        }
-
-        .nav-cta:hover {
-            background: var(--accent-yellow);
-            transform: scale(1.05);
-            padding-left: 40px;
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            padding: 120px 0 80px;
-            background: var(--charcoal);
-            overflow: hidden;
-        }
-
-        /* Floating junk animation */
-        .floating-junk {
-            position: absolute;
-            font-size: 30px;
-            opacity: 0.15;
-            animation: floatAway 15s linear infinite;
-            pointer-events: none;
-        }
-
-        @keyframes floatAway {
-            0% {
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.15;
-            }
-            90% {
-                opacity: 0.15;
-            }
-            100% {
-                transform: translateY(-100px) rotate(360deg);
-                opacity: 0;
-            }
-        }
-
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(255,107,53,0.15);
-            border: 1px solid rgba(255,107,53,0.3);
-            padding: 8px 16px;
-            border-radius: 100px;
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--orange);
-            margin-bottom: 24px;
-            animation: fadeInUp 0.6s ease-out, pulse-badge 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse-badge {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(255,107,53,0.4); }
-            50% { box-shadow: 0 0 20px 5px rgba(255,107,53,0.2); }
-        }
-
-        .hero h1 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(48px, 8vw, 96px);
-            line-height: 0.95;
-            letter-spacing: 2px;
-            margin-bottom: 24px;
-            animation: fadeInUp 0.6s ease-out 0.1s both;
-        }
-
-        .hero h1 span {
-            color: var(--orange);
-            display: inline-block;
-            animation: garageShake 3s ease-in-out infinite;
-        }
-
-        @keyframes garageShake {
-            0%, 100% { transform: rotate(0deg); }
-            2% { transform: rotate(-2deg); }
-            4% { transform: rotate(2deg); }
-            6% { transform: rotate(0deg); }
-        }
-
-        .hero-subtitle {
-            font-size: 20px;
-            color: var(--light-gray);
-            margin-bottom: 40px;
-            max-width: 500px;
-            animation: fadeInUp 0.6s ease-out 0.2s both;
-        }
-
-        .hero-ctas {
-            display: flex;
-            gap: 16px;
-            animation: fadeInUp 0.6s ease-out 0.3s both;
-        }
-
-        .btn-primary {
-            background: var(--orange);
-            color: var(--charcoal);
-            padding: 18px 36px;
-            border-radius: 100px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 15px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-primary::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            background: var(--accent-yellow);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-            z-index: -1;
-        }
-
-        .btn-primary:hover::after {
-            width: 300px;
-            height: 300px;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 10px 30px rgba(255,107,53,0.4);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--off-white);
-            padding: 18px 36px;
-            border-radius: 100px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 15px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            border: 2px solid var(--concrete);
-            transition: all 0.3s;
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--orange);
-            color: var(--orange);
-            transform: translateY(-3px);
-        }
-
-        /* Mess Meter - Fun Interactive Element */
-        .mess-meter-card {
-            background: var(--steel);
-            border-radius: 24px;
-            padding: 40px;
-            border: 2px solid var(--concrete);
-            position: relative;
-            overflow: hidden;
-            transition: all 0.4s;
-        }
-
-        .mess-meter-card:hover {
-            border-color: var(--orange);
-            transform: translateY(-5px);
-        }
-
-        .mess-meter-title {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 28px;
-            color: var(--orange);
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .mess-meter-title span {
-            animation: spin 2s linear infinite;
-            display: inline-block;
-        }
-
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        .mess-meter {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-
-        .mess-option {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 15px 20px;
-            background: var(--concrete);
-            border-radius: 12px;
-            cursor: pointer;
-            transition: all 0.3s;
-            border: 2px solid transparent;
-        }
-
-        .mess-option:hover {
-            background: var(--charcoal);
-            border-color: var(--orange);
-            transform: translateX(10px);
-        }
-
-        .mess-option.selected {
-            background: rgba(255,107,53,0.2);
-            border-color: var(--orange);
-        }
-
-        .mess-emoji {
-            font-size: 32px;
-            transition: transform 0.3s;
-        }
-
-        .mess-option:hover .mess-emoji {
-            transform: scale(1.3) rotate(10deg);
-        }
-
-        .mess-label {
-            flex: 1;
-        }
-
-        .mess-label strong {
-            display: block;
-            font-size: 16px;
-            margin-bottom: 2px;
-        }
-
-        .mess-label span {
-            font-size: 13px;
-            color: var(--light-gray);
-        }
-
-        .mess-price {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 24px;
-            color: var(--orange);
-        }
-
-        .mess-result {
-            text-align: center;
-            padding: 20px;
-            background: linear-gradient(135deg, rgba(255,107,53,0.2) 0%, rgba(255,210,63,0.1) 100%);
-            border-radius: 16px;
-            display: none;
-        }
-
-        .mess-result.show {
-            display: block;
-            animation: popIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        }
-
-        @keyframes popIn {
-            0% { transform: scale(0); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
-        }
-
-        .mess-result-text {
-            font-size: 18px;
-            margin-bottom: 15px;
-        }
-
-        .mess-result-cta {
-            background: var(--orange);
-            color: var(--charcoal);
-            padding: 12px 24px;
-            border: none;
-            border-radius: 100px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .mess-result-cta:hover {
-            background: var(--accent-yellow);
-            transform: scale(1.05);
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Services Section */
-        .services {
-            padding: 120px 0;
-            background: var(--steel);
-            position: relative;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 80px;
-        }
-
-        .section-tag {
-            display: inline-block;
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--orange);
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 16px;
-        }
-
-        .section-title {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(40px, 6vw, 64px);
-            letter-spacing: 2px;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        .service-card {
-            background: var(--charcoal);
-            border-radius: 24px;
-            padding: 40px;
-            border: 2px solid var(--concrete);
-            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, var(--orange) 0%, var(--accent-yellow) 100%);
-            opacity: 0;
-            transition: opacity 0.4s;
-            z-index: 0;
-        }
-
-        .service-card:hover {
-            transform: translateY(-15px) rotate(-1deg);
-            border-color: var(--orange);
-        }
-
-        .service-card:hover::before {
-            opacity: 0.1;
-        }
-
-        .service-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 40px;
-            margin-bottom: 24px;
-            position: relative;
-            z-index: 1;
-            transition: transform 0.4s;
-        }
-
-        .service-card:hover .service-icon {
-            transform: scale(1.1) rotate(10deg);
-            animation: iconBounce 0.6s ease-in-out;
-        }
-
-        @keyframes iconBounce {
-            0%, 100% { transform: scale(1.1) rotate(10deg); }
-            50% { transform: scale(1.2) rotate(-5deg); }
-        }
-
-        .service-card h3 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 28px;
-            letter-spacing: 1px;
-            margin-bottom: 12px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .service-card p {
-            color: var(--light-gray);
-            font-size: 15px;
-            line-height: 1.7;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* How It Works Section */
-        .how-it-works {
-            padding: 120px 0;
-            background: var(--charcoal);
-        }
-
-        .steps-grid {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .step-card {
-            background: var(--steel);
-            border-radius: 24px;
-            padding: 40px 30px;
-            text-align: center;
-            border: 2px solid var(--concrete);
-            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            position: relative;
-            flex: 1;
-            max-width: 300px;
-        }
-
-        .step-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--orange);
-        }
-
-        .step-number {
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 40px;
-            height: 40px;
-            background: var(--orange);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 20px;
-            color: var(--charcoal);
-            font-weight: bold;
-        }
-
-        .step-icon {
-            font-size: 50px;
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        .step-card:hover .step-icon {
-            animation: iconBounce 0.6s ease-in-out;
-        }
-
-        .step-card h3 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 22px;
-            letter-spacing: 1px;
-            margin-bottom: 12px;
-            color: var(--orange);
-        }
-
-        .step-card p {
-            color: var(--light-gray);
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
-        .step-arrow {
-            font-size: 30px;
-            color: var(--orange);
-            animation: arrowPulse 1.5s ease-in-out infinite;
-        }
-
-        @keyframes arrowPulse {
-            0%, 100% { transform: translateX(0); opacity: 1; }
-            50% { transform: translateX(10px); opacity: 0.5; }
-        }
-
-        /* Imagine Transformation Section */
-        .transformation {
-            padding: 120px 0;
-            background: var(--steel);
-        }
-
-        .transformation-visual {
-            display: flex;
-            align-items: stretch;
-            justify-content: center;
-            gap: 0;
-            max-width: 900px;
-            margin: 0 auto;
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.3);
-        }
-
-        .transform-before, .transform-after {
-            flex: 1;
-            padding: 50px 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .transform-before {
-            background: linear-gradient(135deg, #8B0000 0%, #4a0000 100%);
-        }
-
-        .transform-after {
-            background: linear-gradient(135deg, var(--fun-green) 0%, #2d8a83 100%);
-        }
-
-        .transform-content {
-            text-align: center;
-        }
-
-        .transform-emoji {
-            font-size: 70px;
-            display: block;
-            margin-bottom: 15px;
-        }
-
-        .transform-label {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 24px;
-            letter-spacing: 2px;
-            display: block;
-            margin-bottom: 25px;
-            color: var(--off-white);
-        }
-
-        .transform-list {
-            list-style: none;
-            text-align: left;
-        }
-
-        .transform-list li {
-            padding: 8px 0;
-            font-size: 15px;
-            color: var(--off-white);
-        }
-
-        .transform-list.bad li {
-            opacity: 0.9;
-        }
-
-        .transform-list.good li {
-            font-weight: 600;
-        }
-
-        .transform-arrow {
-            background: var(--charcoal);
-            padding: 30px 25px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .transform-arrow span:first-child {
-            font-size: 50px;
-            animation: bearBounce 2s ease-in-out infinite;
-        }
-
-        .arrow-text {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 14px;
-            letter-spacing: 2px;
-            color: var(--orange);
-            text-align: center;
-            line-height: 1.4;
-        }
-
-        /* Pricing Section */
-        .pricing {
-            padding: 120px 0;
-            background: var(--steel);
-        }
-
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-        }
-
-        .pricing-card {
-            background: var(--charcoal);
-            border-radius: 24px;
-            padding: 36px 28px;
-            border: 2px solid var(--concrete);
-            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            position: relative;
-        }
-
-        .pricing-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            border-color: var(--orange);
-        }
-
-        .pricing-card.featured {
-            border-color: var(--orange);
-            transform: scale(1.05);
-            background: linear-gradient(135deg, var(--charcoal) 0%, rgba(255,107,53,0.1) 100%);
-        }
-
-        .pricing-card.featured:hover {
-            transform: scale(1.08) translateY(-5px);
-        }
-
-        .pricing-card.featured::before {
-            content: '🔥 MOST POPULAR';
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: linear-gradient(135deg, var(--orange) 0%, var(--accent-yellow) 100%);
-            color: var(--charcoal);
-            padding: 6px 16px;
-            border-radius: 100px;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            white-space: nowrap;
-        }
-
-        .pricing-emoji {
-            font-size: 48px;
-            margin-bottom: 15px;
-            display: block;
-            transition: transform 0.4s;
-        }
-
-        .pricing-card:hover .pricing-emoji {
-            transform: scale(1.2) rotate(10deg);
-        }
-
-        .pricing-name {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 24px;
-            letter-spacing: 2px;
-            color: var(--orange);
-            margin-bottom: 8px;
-        }
-
-        .pricing-price {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 56px;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-        }
-
-        .pricing-price span {
-            font-size: 20px;
-            color: var(--light-gray);
-        }
-
-        .pricing-desc {
-            color: var(--light-gray);
-            font-size: 14px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--concrete);
-            margin-bottom: 20px;
-        }
-
-        .pricing-features {
-            list-style: none;
-            margin-bottom: 28px;
-        }
-
-        .pricing-features li {
-            padding: 10px 0;
-            font-size: 14px;
-            color: var(--light-gray);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .pricing-features li::before {
-            content: '✓';
-            color: var(--orange);
-            font-weight: 700;
-        }
-
-        .pricing-cta {
-            width: 100%;
-            padding: 16px;
-            background: transparent;
-            border: 2px solid var(--concrete);
-            color: var(--off-white);
-            border-radius: 100px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 13px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .pricing-cta:hover,
-        .pricing-card.featured .pricing-cta {
-            background: var(--orange);
-            border-color: var(--orange);
-            color: var(--charcoal);
-            transform: scale(1.05);
-        }
-
-        /* Why Us Section */
-        .differentiator {
-            padding: 100px 0;
-            background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .diff-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .diff-text h2 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(36px, 5vw, 56px);
-            color: var(--charcoal);
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-        }
-
-        .diff-text p {
-            font-size: 18px;
-            color: var(--charcoal);
-            opacity: 0.85;
-            margin-bottom: 30px;
-        }
-
-        .diff-stats {
-            display: flex;
-            gap: 40px;
-        }
-
-        .diff-stat {
-            text-align: center;
-        }
-
-        .diff-stat-number {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 48px;
-            color: var(--charcoal);
-        }
-
-        .diff-stat-label {
-            font-size: 13px;
-            color: var(--charcoal);
-            opacity: 0.7;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .diff-visual {
-            background: var(--charcoal);
-            border-radius: 24px;
-            padding: 40px;
-        }
-
-        .comparison-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-            border-bottom: 1px solid var(--concrete);
-        }
-
-        .comparison-item:last-child {
-            border-bottom: none;
-        }
-
-        .comparison-label {
-            color: var(--light-gray);
-            font-size: 15px;
-        }
-
-        .comparison-values {
-            display: flex;
-            gap: 30px;
-        }
-
-        .comp-them, .comp-us {
-            text-align: center;
-            min-width: 80px;
-        }
-
-        .comp-them span, .comp-us span {
-            display: block;
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 4px;
-        }
-
-        .comp-them span { color: var(--light-gray); }
-        .comp-us span { color: var(--orange); }
-        .comp-them { color: var(--light-gray); font-weight: 600; }
-        .comp-us { color: var(--orange); font-weight: 700; font-size: 18px; }
-
-        /* Contact Section */
-        .contact {
-            padding: 120px 0;
-            background: var(--charcoal);
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-        }
-
-        .contact-info h2 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(40px, 5vw, 56px);
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-        }
-
-        .contact-info p {
-            color: var(--light-gray);
-            font-size: 18px;
-            margin-bottom: 40px;
-        }
-
-        .contact-methods {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-        }
-
-        .contact-method {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            padding: 20px;
-            background: var(--steel);
-            border-radius: 16px;
-            transition: all 0.3s;
-            cursor: pointer;
-        }
-
-        .contact-method:hover {
-            background: var(--concrete);
-            transform: translateX(10px);
-        }
-
-        .contact-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--orange);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            transition: transform 0.3s;
-        }
-
-        .contact-method:hover .contact-icon {
-            transform: rotate(10deg) scale(1.1);
-        }
-
-        .contact-method-text {
-            font-size: 14px;
-            color: var(--light-gray);
-        }
-
-        .contact-method-value {
-            font-size: 18px;
-            font-weight: 600;
-            color: var(--off-white);
-        }
-
-        .contact-form {
-            background: var(--steel);
-            border-radius: 24px;
-            padding: 40px;
-            border: 2px solid var(--concrete);
-        }
-
-        .form-group {
-            margin-bottom: 24px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 13px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-            color: var(--light-gray);
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 16px;
-            background: var(--charcoal);
-            border: 2px solid var(--concrete);
-            border-radius: 12px;
-            color: var(--off-white);
-            font-family: 'Barlow', sans-serif;
-            font-size: 15px;
-            transition: all 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--orange);
-            box-shadow: 0 0 20px rgba(255,107,53,0.2);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .form-submit {
-            width: 100%;
-            padding: 18px;
-            background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
-            border: none;
-            border-radius: 100px;
-            color: var(--off-white);
-            font-family: 'Barlow', sans-serif;
-            font-weight: 700;
-            font-size: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            cursor: pointer;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .form-submit:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(255,107,53,0.4);
-        }
-
-        .form-submit:active {
-            transform: scale(0.98);
-        }
-
-        /* Footer */
-        footer {
-            padding: 60px 0 30px;
-            background: var(--steel);
-            border-top: 1px solid var(--concrete);
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 40px;
-        }
-
-        .footer-logo {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 24px;
-            letter-spacing: 2px;
-            color: var(--off-white);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .footer-logo span {
-            font-size: 30px;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 30px;
-        }
-
-        .footer-links a {
-            color: var(--light-gray);
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.2s;
-        }
-
-        .footer-links a:hover {
-            color: var(--orange);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid var(--concrete);
-            color: var(--light-gray);
-            font-size: 13px;
-        }
-
-        .service-area {
-            margin-top: 10px;
-            font-size: 12px;
-            color: var(--light-gray);
-            opacity: 0.7;
-        }
-
-        /* Chatbot */
-        .chatbot {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            z-index: 1000;
-        }
-
-        .chatbot-toggle {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
-            border: none;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 36px;
-            box-shadow: 0 10px 30px rgba(255,107,53,0.4);
-            transition: all 0.3s;
-            animation: chatBounce 2s ease-in-out infinite;
-        }
-
-        @keyframes chatBounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .chatbot-toggle:hover {
-            transform: scale(1.1);
-            animation: none;
-        }
-
-        .chatbot-window {
-            position: absolute;
-            bottom: 90px;
-            right: 0;
-            width: 380px;
-            max-height: 500px;
-            background: var(--steel);
-            border-radius: 24px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-            display: none;
-            flex-direction: column;
-            overflow: hidden;
-            border: 2px solid var(--concrete);
-        }
-
-        .chatbot-window.open {
-            display: flex;
-            animation: slideUp 0.3s ease-out;
-        }
-
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .chatbot-header {
-            background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .chatbot-avatar {
-            font-size: 40px;
-        }
-
-        .chatbot-header-text h4 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 20px;
-            letter-spacing: 1px;
-            color: var(--off-white);
-        }
-
-        .chatbot-header-text p {
-            font-size: 13px;
-            color: rgba(255,255,255,0.8);
-        }
-
-        .chatbot-close {
-            margin-left: auto;
-            background: none;
-            border: none;
-            color: var(--off-white);
-            font-size: 24px;
-            cursor: pointer;
-            opacity: 0.8;
-            transition: opacity 0.2s;
-        }
-
-        .chatbot-close:hover {
-            opacity: 1;
-        }
-
-        .chatbot-messages {
-            flex: 1;
-            padding: 20px;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            max-height: 300px;
-        }
-
-        .chat-message {
-            max-width: 85%;
-            padding: 12px 18px;
-            border-radius: 18px;
-            font-size: 14px;
-            line-height: 1.5;
-            animation: messageIn 0.3s ease-out;
-        }
-
-        @keyframes messageIn {
-            from { opacity: 0; transform: scale(0.8); }
-            to { opacity: 1; transform: scale(1); }
-        }
-
-        .chat-message.bot {
-            background: var(--concrete);
-            color: var(--off-white);
-            align-self: flex-start;
-            border-bottom-left-radius: 4px;
-        }
-
-        .chat-message.user {
-            background: var(--orange);
-            color: var(--charcoal);
-            align-self: flex-end;
-            border-bottom-right-radius: 4px;
-        }
-
-        .chatbot-options {
-            padding: 15px 20px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            border-top: 1px solid var(--concrete);
-        }
-
-        .chat-option {
-            padding: 10px 16px;
-            background: var(--charcoal);
-            border: 1px solid var(--concrete);
-            border-radius: 100px;
-            color: var(--off-white);
-            font-size: 13px;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .chat-option:hover {
-            background: var(--orange);
-            color: var(--charcoal);
-            border-color: var(--orange);
-            transform: scale(1.05);
-        }
-
-        /* Confetti */
-        .confetti {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 9999;
-            overflow: hidden;
-        }
-
-        .confetti-piece {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            animation: confettiFall 3s ease-out forwards;
-        }
-
-        @keyframes confettiFall {
-            0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
-            100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
-        }
-
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .hero-content,
-            .diff-content,
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 60px;
-            }
-
-            .pricing-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .pricing-card.featured {
-                transform: none;
-            }
-
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .steps-grid {
-                flex-wrap: wrap;
-            }
-
-            .step-arrow {
-                display: none;
-            }
-
-            .transformation-visual {
-                flex-direction: column;
-            }
-
-            .transform-arrow {
-                flex-direction: row;
-                padding: 20px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .pricing-grid,
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-ctas {
-                flex-direction: column;
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-
-            .diff-stats {
-                justify-content: center;
-            }
-
-            .footer-content {
-                flex-direction: column;
-                gap: 30px;
-                text-align: center;
-            }
-
-            .footer-links {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .container {
-                padding: 0 16px;
-            }
-
-            .hero {
-                padding: 100px 0 60px;
-            }
-
-            .hero h1 {
-                font-size: 42px;
-            }
-
-            .slider-container {
-                height: 400px;
-            }
-
-            .slider-emoji {
-                font-size: 60px;
-            }
-
-            .slider-side {
-                font-size: 32px;
-            }
-
-            .chatbot-window {
-                width: calc(100vw - 48px);
-                right: -12px;
-            }
-
-            .steps-grid {
-                flex-direction: column;
-                gap: 30px;
-            }
-
-            .step-card {
-                max-width: 100%;
-            }
-
-            .step-arrow {
-                display: none;
-            }
-
-            .transformation-visual {
-                flex-direction: column;
-            }
-
-            .transform-arrow {
-                flex-direction: row;
-                padding: 15px;
-            }
-
-            .transform-before, .transform-after {
-                padding: 30px 20px;
-            }
-
-            .transform-emoji {
-                font-size: 50px;
-            }
-
-            .transform-label {
-                font-size: 20px;
-            }
-
-            .how-it-works, .transformation {
-                padding: 80px 0;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 12px;
-            }
-
-            .logo {
-                font-size: 18px;
-            }
-
-            .logo-bear {
-                font-size: 28px;
-            }
-
-            .nav-cta {
-                padding: 10px 16px;
-                font-size: 12px;
-            }
-
-            .hero {
-                padding: 90px 0 50px;
-                min-height: auto;
-            }
-
-            .hero h1 {
-                font-size: 32px;
-                margin-bottom: 16px;
-            }
-
-            .hero-badge {
-                font-size: 11px;
-                padding: 6px 12px;
-            }
-
-            .hero-subtitle {
-                font-size: 14px;
-            }
-
-            .btn-primary, .btn-secondary {
-                padding: 14px 24px;
-                font-size: 13px;
-            }
-
-            .mess-meter-card {
-                padding: 24px;
-            }
-
-            .mess-meter-title {
-                font-size: 22px;
-            }
-
-            .mess-option {
-                padding: 12px 15px;
-            }
-
-            .mess-emoji {
-                font-size: 24px;
-            }
-
-            .mess-label strong {
-                font-size: 14px;
-            }
-
-            .mess-label span {
-                font-size: 11px;
-            }
-
-            .mess-price {
-                font-size: 18px;
-            }
-
-            .section-title {
-                font-size: 28px;
-            }
-
-            .services, .pricing, .contact, .transformation {
-                padding: 60px 0;
-            }
-
-            .service-card, .pricing-card {
-                padding: 24px;
-            }
-
-            .pricing-price {
-                font-size: 42px;
-            }
-
-            .slider-container {
-                height: 350px;
-            }
-
-            .chatbot-toggle {
-                width: 60px;
-                height: 60px;
-                font-size: 28px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Floating Junk (Background Animation) -->
-    <div class="floating-junk" style="left: 10%; animation-delay: 0s;">📦</div>
-    <div class="floating-junk" style="left: 25%; animation-delay: 3s;">🪑</div>
-    <div class="floating-junk" style="left: 40%; animation-delay: 6s;">🔧</div>
-    <div class="floating-junk" style="left: 55%; animation-delay: 2s;">🚲</div>
-    <div class="floating-junk" style="left: 70%; animation-delay: 8s;">📺</div>
-    <div class="floating-junk" style="left: 85%; animation-delay: 4s;">🏀</div>
-
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="container nav-content">
-            <a href="#" class="logo">
-                <span class="logo-bear" id="logoBear">🐻</span>
-                GRIZZFLOW'S GARAGE
-            </a>
-            <ul class="nav-links">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <a href="#contact" class="nav-cta">Get Free Quote</a>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <div class="hero-badge">🎉 Now Serving the South Bay</div>
-                <h1>RECLAIM YOUR <span>GARAGE</span></h1>
-                <p class="hero-subtitle">Professional garage cleanup and organization for the South Bay. We transform cluttered chaos into functional space you'll actually use—and we'll haul away anything you no longer want.</p>
-                <div class="hero-ctas">
-                    <a href="#contact" class="btn-primary">
-                        Get Your Free Quote
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M5 12h14M12 5l7 7-7 7"/>
-                        </svg>
-                    </a>
-                    <a href="#pricing" class="btn-secondary">View Pricing</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <!-- Interactive Mess Meter -->
-                <div class="mess-meter-card">
-                    <div class="mess-meter-title"><span>⚙️</span> How Messy Is Your Garage?</div>
-                    <div class="mess-meter">
-                        <div class="mess-option" data-price="$325" data-level="light" onclick="selectMess(this)">
-                            <span class="mess-emoji">😊</span>
-                            <div class="mess-label">
-                                <strong>Kinda Messy</strong>
-                                <span>Can still park, just need to organize</span>
-                            </div>
-                            <div class="mess-price">$325</div>
-                        </div>
-                        <div class="mess-option" data-price="$475" data-level="medium" onclick="selectMess(this)">
-                            <span class="mess-emoji">😅</span>
-                            <div class="mess-label">
-                                <strong>Pretty Bad</strong>
-                                <span>Car? What car? It's outside.</span>
-                            </div>
-                            <div class="mess-price">$475</div>
-                        </div>
-                        <div class="mess-option" data-price="$625" data-level="heavy" onclick="selectMess(this)">
-                            <span class="mess-emoji">😰</span>
-                            <div class="mess-label">
-                                <strong>Send Help</strong>
-                                <span>There might be a car under there</span>
-                            </div>
-                            <div class="mess-price">$625</div>
-                        </div>
-                        <div class="mess-option" data-price="$800+" data-level="extreme" onclick="selectMess(this)">
-                            <span class="mess-emoji">🤯</span>
-                            <div class="mess-label">
-                                <strong>Code Red</strong>
-                                <span>I haven't seen the floor in years</span>
-                            </div>
-                            <div class="mess-price">$800+</div>
-                        </div>
-                    </div>
-                    <div class="mess-result" id="messResult">
-                        <div class="mess-result-text">
-                            <strong id="messResultLevel">We got you!</strong><br>
-                            <span id="messResultDesc">Let's transform that garage!</span>
-                        </div>
-                        <button class="mess-result-cta" onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">Book Now →</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">What We Do</span>
-                <h2 class="section-title">GARAGE TRANSFORMATION SERVICES</h2>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🧹</div>
-                    <h3>GARAGE CLEANUP</h3>
-                    <p>We deep clean your garage from top to bottom. Sweep, dust, clear out the cobwebs, and get rid of years of accumulated grime. Start fresh with a space you're proud of.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📦</div>
-                    <h3>ORGANIZATION</h3>
-                    <p>Strategic organization that maximizes your space. We sort, categorize, and arrange everything so you can actually find what you need—and maybe even park your car again.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🚛</div>
-                    <h3>WE HAUL THE JUNK</h3>
-                    <p>Don't want it anymore? We'll take it. As part of your cleanup, we haul away anything you no longer need—no extra hauling fees, no hassle. Just point and it's gone.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section class="how-it-works" id="how-it-works">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Simple Process</span>
-                <h2 class="section-title">HOW IT WORKS</h2>
-            </div>
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <div class="step-icon">📱</div>
-                    <h3>BOOK YOUR SLOT</h3>
-                    <p>Fill out our quick form or give us a call. We'll get back to you within 24 hours to schedule your weekend appointment.</p>
-                </div>
-                <div class="step-arrow">→</div>
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <div class="step-icon">🐻</div>
-                    <h3>WE GET TO WORK</h3>
-                    <p>We show up, roll up our sleeves, and transform your garage. You tell us what stays and what goes—we handle the rest.</p>
-                </div>
-                <div class="step-arrow">→</div>
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <div class="step-icon">🚗</div>
-                    <h3>ENJOY YOUR SPACE</h3>
-                    <p>Park your car, find your tools, actually use your garage. You'll wonder why you didn't do this sooner.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Imagine the Transformation Section -->
-    <section class="transformation" id="transformation">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">The Possibilities</span>
-                <h2 class="section-title">IMAGINE THE TRANSFORMATION</h2>
-            </div>
-            <div class="transformation-visual">
-                <div class="transform-before">
-                    <div class="transform-content">
-                        <span class="transform-emoji">😱</span>
-                        <span class="transform-label">YOUR GARAGE NOW</span>
-                        <ul class="transform-list bad">
-                            <li>❌ Can't find anything</li>
-                            <li>❌ Car lives outside</li>
-                            <li>❌ Embarrassing mess</li>
-                            <li>❌ Wasted space</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="transform-arrow">
-                    <span>🐻</span>
-                    <span class="arrow-text">LET GRIZZ<br>WORK</span>
-                </div>
-                <div class="transform-after">
-                    <div class="transform-content">
-                        <span class="transform-emoji">🤩</span>
-                        <span class="transform-label">YOUR GARAGE AFTER</span>
-                        <ul class="transform-list good">
-                            <li>✓ Everything organized</li>
-                            <li>✓ Car fits inside</li>
-                            <li>✓ Space you're proud of</li>
-                            <li>✓ Functional zones</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section class="pricing" id="pricing">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Transparent Pricing</span>
-                <h2 class="section-title">FLAT-RATE PACKAGES</h2>
-            </div>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <span class="pricing-emoji">🐻</span>
-                    <div class="pricing-name">GRIZZ LIGHT</div>
-                    <div class="pricing-price">$325</div>
-                    <p class="pricing-desc">Perfect for 1-car garages with light clutter</p>
-                    <ul class="pricing-features">
-                        <li>1-car garage</li>
-                        <li>Light cleanout</li>
-                        <li>Basic organization</li>
-                        <li>We haul the junk</li>
-                        <li>Same-week scheduling</li>
-                    </ul>
-                    <button class="pricing-cta">Book Now</button>
-                </div>
-                <div class="pricing-card featured">
-                    <span class="pricing-emoji">💪</span>
-                    <div class="pricing-name">GRIZZ STANDARD</div>
-                    <div class="pricing-price">$475</div>
-                    <p class="pricing-desc">2-car garage OR heavy 1-car cleanout</p>
-                    <ul class="pricing-features">
-                        <li>Up to 2-car garage</li>
-                        <li>Full cleanout</li>
-                        <li>Complete organization</li>
-                        <li>We haul the junk</li>
-                        <li>Priority scheduling</li>
-                    </ul>
-                    <button class="pricing-cta">Book Now</button>
-                </div>
-                <div class="pricing-card">
-                    <span class="pricing-emoji">🔥</span>
-                    <div class="pricing-name">GRIZZ DEEP</div>
-                    <div class="pricing-price">$625</div>
-                    <p class="pricing-desc">Major cleanouts requiring extra attention</p>
-                    <ul class="pricing-features">
-                        <li>Any garage size</li>
-                        <li>Major cleanout</li>
-                        <li>Detailed organization</li>
-                        <li>We haul the junk</li>
-                        <li>Before/after photos</li>
-                    </ul>
-                    <button class="pricing-cta">Book Now</button>
-                </div>
-                <div class="pricing-card">
-                    <span class="pricing-emoji">🚀</span>
-                    <div class="pricing-name">GRIZZ TOTAL</div>
-                    <div class="pricing-price">$800<span>+</span></div>
-                    <p class="pricing-desc">Extreme situations & hoarder-level cleanouts</p>
-                    <ul class="pricing-features">
-                        <li>Unlimited scope</li>
-                        <li>Multi-day if needed</li>
-                        <li>Complete transformation</li>
-                        <li>We haul the junk</li>
-                        <li>Custom solutions</li>
-                    </ul>
-                    <button class="pricing-cta">Get Quote</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Differentiator Section -->
-    <section class="differentiator" id="why-us">
-        <div class="container diff-content">
-            <div class="diff-text">
-                <h2>YOUR WEEKEND SHOULDN'T BE SPENT CLEANING THE GARAGE</h2>
-                <p>You've got better things to do than sort through boxes all day. We handle the dirty work so you can enjoy your weekend—and finally have a garage you're proud of.</p>
-                <div class="diff-stats">
-                    <div class="diff-stat">
-                        <div class="diff-stat-number">1 DAY</div>
-                        <div class="diff-stat-label">Turnaround</div>
-                    </div>
-                    <div class="diff-stat">
-                        <div class="diff-stat-number">100%</div>
-                        <div class="diff-stat-label">Satisfaction</div>
-                    </div>
-                    <div class="diff-stat">
-                        <div class="diff-stat-number">LOCAL</div>
-                        <div class="diff-stat-label">South Bay</div>
-                    </div>
-                </div>
-            </div>
-            <div class="diff-visual">
-                <div class="comparison-item">
-                    <span class="comparison-label">🧹 Deep Cleanup</span>
-                    <div class="comparison-values">
-                        <div class="comp-us"><span></span>Included</div>
-                    </div>
-                </div>
-                <div class="comparison-item">
-                    <span class="comparison-label">📦 Full Organization</span>
-                    <div class="comparison-values">
-                        <div class="comp-us"><span></span>Included</div>
-                    </div>
-                </div>
-                <div class="comparison-item">
-                    <span class="comparison-label">🚛 Haul Away Unwanted Items</span>
-                    <div class="comparison-values">
-                        <div class="comp-us"><span></span>Included</div>
-                    </div>
-                </div>
-                <div class="comparison-item">
-                    <span class="comparison-label">💰 Flat-Rate Pricing</span>
-                    <div class="comparison-values">
-                        <div class="comp-us"><span></span>No Surprises</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container contact-grid">
-            <div class="contact-info">
-                <h2>LET'S TRANSFORM YOUR GARAGE 🐻</h2>
-                <p>Ready to reclaim your space? Get a free quote and let's schedule your garage transformation. Weekend appointments available!</p>
-                <div class="contact-methods">
-                    <div class="contact-method" onclick="window.location.href='tel:5098609850'">
-                        <div class="contact-icon">📞</div>
-                        <div>
-                            <div class="contact-method-text">Call or Text</div>
-                            <div class="contact-method-value">(509) 860-9850</div>
-                        </div>
-                    </div>
-                    <div class="contact-method" onclick="window.location.href='mailto:grizzflowsgarage@gmail.com'">
-                        <div class="contact-icon">📧</div>
-                        <div>
-                            <div class="contact-method-text">Email</div>
-                            <div class="contact-method-value">grizzflowsgarage@gmail.com</div>
-                        </div>
-                    </div>
-                    <div class="contact-method">
-                        <div class="contact-icon">📍</div>
-                        <div>
-                            <div class="contact-method-text">Service Area</div>
-                            <div class="contact-method-value">South Bay, Los Angeles</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="contact-form">
-                <form id="quote-form">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" placeholder="John Smith" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="garage-size">Garage Size</label>
-                        <select id="garage-size" name="garage-size" required>
-                            <option value="">Select your garage size</option>
-                            <option value="1-car-light">1-Car Garage (Light Clutter) 😊</option>
-                            <option value="1-car-heavy">1-Car Garage (Heavy Clutter) 😅</option>
-                            <option value="2-car">2-Car Garage 😰</option>
-                            <option value="3-car">3-Car Garage 🤯</option>
-                            <option value="extreme">Extreme / Not Sure 💀</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Tell Us About Your Garage</label>
-                        <textarea id="message" name="message" placeholder="How bad is it? Be honest... we've seen it all! 🐻"></textarea>
-                    </div>
-                    <button type="submit" class="form-submit">🎉 Get My Free Quote</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo"><span>🐻</span> GRIZZFLOW'S GARAGE</div>
-                <div class="footer-links">
-                    <a href="#services">Services</a>
-                    <a href="#pricing">Pricing</a>
-                    <a href="#why-us">Why Us</a>
-                    <a href="#contact">Contact</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2026 GrizzFlow's Garage. All rights reserved. Locally owned and operated in the South Bay. 🐻💪</p>
-                <p class="service-area">Serving: Hermosa Beach, Manhattan Beach, Redondo Beach, Torrance, El Segundo, Palos Verdes, Hawthorne, Gardena, and surrounding South Bay areas</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Chatbot -->
-    <div class="chatbot">
-        <div class="chatbot-window" id="chatWindow">
-            <div class="chatbot-header">
-                <span class="chatbot-avatar">🐻</span>
-                <div class="chatbot-header-text">
-                    <h4>Grizz</h4>
-                    <p>Your garage helper</p>
-                </div>
-                <button class="chatbot-close" onclick="toggleChat()">×</button>
-            </div>
-            <div class="chatbot-messages" id="chatMessages">
-                <div class="chat-message bot">Hey there! 👋 I'm Grizz! Got questions about garage cleanouts? I'm here to help!</div>
-            </div>
-            <div class="chatbot-options" id="chatOptions">
-                <button class="chat-option" onclick="askQuestion('pricing')">💰 Pricing?</button>
-                <button class="chat-option" onclick="askQuestion('areas')">📍 Service areas?</button>
-                <button class="chat-option" onclick="askQuestion('junk')">🚛 Haul away stuff?</button>
-                <button class="chat-option" onclick="askQuestion('schedule')">📅 Scheduling?</button>
-            </div>
-        </div>
-        <button class="chatbot-toggle" onclick="toggleChat()" id="chatToggle">🐻</button>
-    </div>
-
-    <!-- Confetti Container -->
-    <div class="confetti" id="confetti"></div>
-
-    <script>
-        // Navbar scroll effect
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Logo bear interaction
-        const logoBear = document.getElementById('logoBear');
-        logoBear.addEventListener('click', () => {
-            logoBear.style.animation = 'none';
-            logoBear.offsetHeight; // Trigger reflow
-            logoBear.style.animation = 'bearWave 0.5s ease-in-out';
-        });
-
-        // Mess meter selection
-        function selectMess(element) {
-            // Remove selected from all
-            document.querySelectorAll('.mess-option').forEach(opt => opt.classList.remove('selected'));
-            // Add selected to clicked
-            element.classList.add('selected');
-
-            // Show result
-            const result = document.getElementById('messResult');
-            const resultLevel = document.getElementById('messResultLevel');
-            const resultDesc = document.getElementById('messResultDesc');
-
-            const level = element.dataset.level;
-            const price = element.dataset.price;
-
-            const messages = {
-                light: { level: "Easy peasy! 🐻", desc: `Starting at just ${price} - we'll have it done in no time!` },
-                medium: { level: "No sweat! 💪", desc: `At ${price}, we'll get your car back in the garage!` },
-                heavy: { level: "Challenge accepted! 🔥", desc: `${price} to transform your space completely!` },
-                extreme: { level: "We LIVE for this! 🚀", desc: `${price} for the ultimate garage makeover!` }
-            };
-
-            resultLevel.textContent = messages[level].level;
-            resultDesc.textContent = messages[level].desc;
-            result.classList.add('show');
-        }
-
-        // Chatbot
-        function toggleChat() {
-            const chatWindow = document.getElementById('chatWindow');
-            const chatToggle = document.getElementById('chatToggle');
-            chatWindow.classList.toggle('open');
-            chatToggle.style.animation = 'none';
-        }
-
-        function askQuestion(topic) {
-            const messages = document.getElementById('chatMessages');
-            const options = document.getElementById('chatOptions');
-
-            const questions = {
-                pricing: "What are your prices?",
-                areas: "What areas do you serve?",
-                junk: "Will you haul away my stuff?",
-                schedule: "How do I schedule?"
-            };
-
-            const answers = {
-                pricing: "Great question! 💰 Our garage cleanup packages start at $325 for light jobs and go up to $800+ for major transformations. That includes cleaning, organizing, AND hauling away whatever you don't want!",
-                areas: "We serve the entire South Bay! 📍 That includes Hermosa Beach, Manhattan Beach, Redondo Beach, Torrance, El Segundo, Palos Verdes, Hawthorne, Gardena, and surrounding areas. If you're nearby, we've got you covered!",
-                junk: "Absolutely! 🚛 As part of your garage cleanup, we'll haul away anything you no longer want—no extra fees. Old furniture, broken stuff, random boxes... just point and it's gone! Note: We focus on garages, not whole-house cleanouts.",
-                schedule: "Easy! 📅 We're available weekends and can usually book within the same week. Just fill out the quote form or give us a call at (509) 860-9850. We'll get back to you within 24 hours!"
-            };
-
-            // Add user message
-            const userMsg = document.createElement('div');
-            userMsg.className = 'chat-message user';
-            userMsg.textContent = questions[topic];
-            messages.appendChild(userMsg);
-
-            // Add bot response after a short delay
-            setTimeout(() => {
-                const botMsg = document.createElement('div');
-                botMsg.className = 'chat-message bot';
-                botMsg.textContent = answers[topic];
-                messages.appendChild(botMsg);
-                messages.scrollTop = messages.scrollHeight;
-            }, 500);
-
-            messages.scrollTop = messages.scrollHeight;
-        }
-
-        // Confetti function
-        function createConfetti() {
-            const confettiContainer = document.getElementById('confetti');
-            const colors = ['#FF6B35', '#FFD23F', '#4ECDC4', '#9B59B6', '#E8E8E8'];
-
-            for (let i = 0; i < 100; i++) {
-                const confetti = document.createElement('div');
-                confetti.className = 'confetti-piece';
-                confetti.style.left = Math.random() * 100 + '%';
-                confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
-                confetti.style.animationDelay = Math.random() * 2 + 's';
-                confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
-                confettiContainer.appendChild(confetti);
-            }
-
-            setTimeout(() => {
-                confettiContainer.innerHTML = '';
-            }, 5000);
-        }
-
-        // Form submission with confetti
-        document.getElementById('quote-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
-            console.log('Form submitted:', data);
-
-            // Create confetti celebration
-            createConfetti();
-
-            // Show success message
-            alert('🎉 Awesome! Thanks for reaching out! We\'ll get back to you within 24 hours with your free quote. Get ready to reclaim your garage!');
-            this.reset();
-        });
-
-        // Pricing button clicks
-        document.querySelectorAll('.pricing-cta').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelector('#contact').scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Intersection Observer for scroll animations
-        const observerOptions = {
+        }, {
             threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+            rootMargin: '0px 0px -40px 0px'
+        });
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0) rotate(0deg)';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.service-card, .pricing-card').forEach((el, index) => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(50px)';
-            el.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
-            observer.observe(el);
+        document.querySelectorAll('.reveal').forEach((el, index) => {
+            el.style.transitionDelay = `${index % 4 * 0.1}s`;
+            revealObserver.observe(el);
         });
     </script>
 </body>
