@@ -1,0 +1,15 @@
+Date,Client,Address,Tier,Price,Dump Fee,Gas,Supplies,Hours,Net Profit,Lead Source,Notes
+2026-02-01,Example Client,123 Main St Manhattan Beach,Standard,475,60,12,20,4.5,383,Google,First job template row
+,,,,,,,,,,,
+,,,,,,,,,,,
+MONTHLY TOTALS,=COUNTA(A2:A100)-1 jobs,,,=SUM(E2:E100),=SUM(F2:F100),=SUM(G2:G100),=SUM(H2:H100),=SUM(I2:I100),=SUM(J2:J100),,
+,,,,,,,,,,,
+FIXED COSTS (enter monthly),,,,,,,,,,,,
+Insurance,300,,,,,,,,,,,
+Marketing,150,,,,,,,,,,,
+Phone/Software,40,,,,,,,,,,,
+Tools Reserve,75,,,,,,,,,,,
+Misc,75,,,,,,,,,,,
+TOTAL FIXED,640,,,,,,,,,,,
+,,,,,,,,,,,
+NET PROFIT,=J4-B17,,,,,,,,,,,

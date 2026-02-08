@@ -1,0 +1,82 @@
+{
+  "url": "/garage-cleanup-redondo-beach/",
+  "playbook_type": "LOCATIONS",
+  "seo": {
+    "title": "Garage Cleanup Redondo Beach | Flat-Rate from $325",
+    "meta_description": "Professional garage cleanup in Redondo Beach. Flat-rate pricing includes junk removal. Same-week scheduling. Get your free quote today.",
+    "primary_keyword": "garage cleanup redondo beach",
+    "secondary_keywords": ["redondo beach garage organization", "junk removal redondo beach", "garage cleanout redondo beach"],
+    "search_intent": "transactional_local"
+  },
+  "content": {
+    "h1": "Garage Cleanup in Redondo Beach",
+    "introduction": "Redondo Beach garages face a unique challenge: limited space meets beach lifestyle. Between the surfboards, beach chairs, bikes, and the stuff that's been piling up since you moved in, your garage has become unusable. GrizzFlow's Garage helps Redondo Beach homeowners take back their space with flat-rate cleanup starting at $325—junk removal included.",
+    "sections": [
+      {
+        "heading": "Why Redondo Beach Garages Get Overwhelmed",
+        "body": "Beach communities accumulate gear fast. Add in the holiday decorations, old furniture you've been meaning to donate, and boxes from your last move—suddenly your $1M+ home has an unusable garage.\n\nThe average Redondo Beach garage we see hasn't fit a car in 3+ years. Sound familiar? You're not alone, and it's fixable in a day."
+      },
+      {
+        "heading": "What We Handle in Redondo Beach",
+        "body": "**Full Cleanout**: Everything removed, sorted, and only what you want comes back.\n\n**Deep Cleaning**: Floors, walls, shelving—the garage should look and smell clean when we're done.\n\n**Junk Removal**: All unwanted items hauled away. Donations coordinated with local charities.\n\n**Organization**: Zone-based setup so you can actually find things. Beach gear accessible, seasonal stuff stored smart."
+      },
+      {
+        "heading": "Redondo Beach Flat-Rate Pricing",
+        "body": "No hourly billing. No surprises.\n\n• **Light ($325)**: 1-car garage, light clutter\n• **Standard ($475)**: 2-car or packed 1-car\n• **Deep ($625)**: Major cleanouts\n• **Total ($800+)**: Extreme situations\n\nPrice includes labor, supplies, and all hauling."
+      },
+      {
+        "heading": "Areas We Serve in Redondo Beach",
+        "body": "We cover all Redondo Beach neighborhoods:\n\n• North Redondo\n• South Redondo\n• Riviera Village area\n• Golden Hills\n• El Nido\n• Hollywood Riviera\n\nAlso serving Hermosa Beach, Manhattan Beach, Torrance, and Palos Verdes."
+      },
+      {
+        "heading": "How It Works",
+        "body": "**1. Book**: Call (509) 860-9850 or submit our form. Response within 24 hours.\n\n**2. Schedule**: Same-week availability most weeks.\n\n**3. Direct**: Walk us through what stays and goes.\n\n**4. Done**: We clean, organize, haul. You enjoy your garage."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How long does a Redondo Beach garage cleanup take?",
+        "answer": "Most jobs complete in 4-8 hours. Light 1-car garages can be done in 3-4 hours; packed 2-car garages may take a full day."
+      },
+      {
+        "question": "Do you handle beach equipment removal?",
+        "answer": "Yes. Surfboards, paddleboards, beach chairs, umbrellas, boogie boards—we haul it all if you want it gone."
+      },
+      {
+        "question": "Can you work around my schedule?",
+        "answer": "Absolutely. We offer flexible scheduling including weekends. Most Redondo Beach clients book us when they can be home for the first 30 minutes to give direction, then go about their day."
+      },
+      {
+        "question": "What's included in the flat rate?",
+        "answer": "Everything: labor, cleaning supplies, junk hauling, donation drop-offs. No hidden fees."
+      },
+      {
+        "question": "Do you serve the Riviera Village area?",
+        "answer": "Yes. We serve all of Redondo Beach including Riviera Village, North Redondo, South Redondo, and surrounding neighborhoods."
+      }
+    ],
+    "call_to_action": "Ready to reclaim your Redondo Beach garage? Call (509) 860-9850 or get your free quote online. Same-week scheduling available."
+  },
+  "schema": {
+    "type": "LocalBusiness",
+    "structured_data": {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "GrizzFlow's Garage - Redondo Beach",
+      "description": "Professional garage cleanup in Redondo Beach, CA. Flat-rate pricing, junk removal included.",
+      "telephone": "+1-509-860-9850",
+      "areaServed": {"@type": "City", "name": "Redondo Beach", "containedIn": "California"},
+      "priceRange": "$325-$800+"
+    }
+  },
+  "internal_links": [
+    {"url": "/", "anchor": "GrizzFlow's Garage"},
+    {"url": "/garage-cleanup-hermosa-beach/", "anchor": "Hermosa Beach"},
+    {"url": "/garage-cleanup-manhattan-beach/", "anchor": "Manhattan Beach"},
+    {"url": "/garage-cleanup-torrance/", "anchor": "Torrance"},
+    {"url": "/garage-cleanup-palos-verdes/", "anchor": "Palos Verdes"},
+    {"url": "/#pricing", "anchor": "pricing"}
+  ],
+  "related_pages": ["/garage-cleanup-hermosa-beach/", "/garage-cleanup-torrance/", "/garage-cleanup-palos-verdes/"],
+  "word_count": 892
+}

@@ -1,0 +1,103 @@
+{
+  "batch_id": "batch-001",
+  "generated_at": "2026-02-06T20:56:00-08:00",
+  "total_pages": 12,
+  "playbook_distribution": {
+    "LOCATIONS": 8,
+    "PERSONAS": 2,
+    "TEMPLATES": 1,
+    "COMPARISONS": 1
+  },
+  "pages": [
+    {
+      "url": "/garage-cleanup-hermosa-beach/",
+      "playbook": "LOCATIONS",
+      "primary_keyword": "garage cleanup hermosa beach",
+      "status": "GENERATED",
+      "file": "locations/hermosa-beach.json"
+    },
+    {
+      "url": "/garage-cleanup-manhattan-beach/",
+      "playbook": "LOCATIONS",
+      "primary_keyword": "garage cleanup manhattan beach",
+      "status": "GENERATED",
+      "file": "locations/manhattan-beach.json"
+    },
+    {
+      "url": "/garage-cleanup-redondo-beach/",
+      "playbook": "LOCATIONS",
+      "primary_keyword": "garage cleanup redondo beach",
+      "status": "PENDING",
+      "file": "locations/redondo-beach.json"
+    },
+    {
+      "url": "/garage-cleanup-torrance/",
+      "playbook": "LOCATIONS",
+      "primary_keyword": "garage cleanup torrance",
+      "status": "PENDING",
+      "file": "locations/torrance.json"
+    },
+    {
+      "url": "/garage-cleanup-el-segundo/",
+      "playbook": "LOCATIONS",
+      "primary_keyword": "garage cleanup el segundo",
+      "status": "PENDING",
+      "file": "locations/el-segundo.json"
+    },
+    {
+      "url": "/garage-cleanup-palos-verdes/",
+      "playbook": "LOCATIONS",
+      "primary_keyword": "garage cleanup palos verdes",
+      "status": "PENDING",
+      "file": "locations/palos-verdes.json"
+    },
+    {
+      "url": "/garage-cleanup-gardena/",
+      "playbook": "LOCATIONS",
+      "primary_keyword": "garage cleanup gardena",
+      "status": "PENDING",
+      "file": "locations/gardena.json"
+    },
+    {
+      "url": "/garage-cleanup-hawthorne/",
+      "playbook": "LOCATIONS",
+      "primary_keyword": "garage cleanup hawthorne",
+      "status": "PENDING",
+      "file": "locations/hawthorne.json"
+    },
+    {
+      "url": "/garage-cleanup-for-home-sellers/",
+      "playbook": "PERSONAS",
+      "primary_keyword": "garage cleanup for home sellers",
+      "status": "GENERATED",
+      "file": "personas/home-sellers.json"
+    },
+    {
+      "url": "/garage-cleanup-for-busy-professionals/",
+      "playbook": "PERSONAS",
+      "primary_keyword": "garage cleanup for busy professionals",
+      "status": "PENDING",
+      "file": "personas/busy-professionals.json"
+    },
+    {
+      "url": "/resources/garage-cleanup-checklist/",
+      "playbook": "TEMPLATES",
+      "primary_keyword": "garage cleanup checklist",
+      "status": "GENERATED",
+      "file": "templates/garage-cleanup-checklist.json"
+    },
+    {
+      "url": "/compare/diy-vs-professional-garage-cleanup/",
+      "playbook": "COMPARISONS",
+      "primary_keyword": "diy vs professional garage cleanup",
+      "status": "PENDING",
+      "file": "comparisons/diy-vs-professional.json"
+    }
+  ],
+  "validation_summary": {
+    "unique_slugs": true,
+    "no_keyword_cannibalization": true,
+    "minimum_diversity": true
+  },
+  "next_batch": "batch-002"
+}

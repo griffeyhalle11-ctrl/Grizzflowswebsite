@@ -1,0 +1,18 @@
+# robots.txt for GrizzFlow's Garage
+# https://grizzflowsgarage.com
+
+User-agent: *
+Allow: /
+
+# Disallow non-public files
+Disallow: /pseo/
+Disallow: /v4/
+Disallow: /index-fun-preview.html
+Disallow: /index-original.html
+Disallow: /index-v2.html
+Disallow: /index-v3.html
+Disallow: /og-image.html
+Disallow: /schema-to-add.html
+
+# Sitemap location
+Sitemap: https://grizzflowsgarage.com/sitemap.xml

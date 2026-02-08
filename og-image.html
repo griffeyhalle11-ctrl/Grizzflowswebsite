@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1200px;
+      height: 630px;
+      background: #0c0e09;
+      font-family: system-ui, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .camo {
+      position: absolute;
+      inset: 0;
+      opacity: 0.4;
+      background:
+        radial-gradient(ellipse 50% 40% at 10% 20%, #3d5a1f 0%, transparent 70%),
+        radial-gradient(ellipse 45% 50% at 90% 10%, #5c7a2e 0%, transparent 65%),
+        radial-gradient(ellipse 55% 35% at 30% 60%, #6b5540 0%, transparent 60%),
+        radial-gradient(ellipse 40% 45% at 70% 50%, #2a3820 0%, transparent 70%),
+        radial-gradient(ellipse 50% 40% at 50% 90%, #3d5a1f 0%, transparent 65%);
+    }
+    .content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: #f5f5f0;
+    }
+    .logo {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 30px;
+    }
+    h1 {
+      font-size: 72px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      letter-spacing: -2px;
+    }
+    h1 span { color: #7fa035; }
+    p {
+      font-size: 32px;
+      color: #9a9a8e;
+      margin-bottom: 30px;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(127, 160, 53, 0.15);
+      border: 2px solid rgba(127, 160, 53, 0.4);
+      padding: 12px 28px;
+      border-radius: 100px;
+      font-size: 24px;
+      font-weight: 600;
+      color: #7fa035;
+    }
+  </style>
+</head>
+<body>
+  <div class="camo"></div>
+  <div class="content">
+    <svg class="logo" viewBox="0 0 120 120" fill="none">
+      <circle cx="33" cy="27" r="17" fill="#2a3820"/>
+      <circle cx="87" cy="27" r="17" fill="#2a3820"/>
+      <ellipse cx="60" cy="60" rx="40" ry="34" fill="#2a3820"/>
+      <ellipse cx="60" cy="72" rx="17" ry="13" fill="#6b5540"/>
+      <ellipse cx="45" cy="53" rx="9" ry="7" fill="#f5f5f0"/>
+      <ellipse cx="75" cy="53" rx="9" ry="7" fill="#f5f5f0"/>
+      <circle cx="45" cy="54" r="4" fill="#0c0e09"/>
+      <circle cx="75" cy="54" r="4" fill="#0c0e09"/>
+      <ellipse cx="60" cy="69" rx="7" ry="5" fill="#1a1a1a"/>
+    </svg>
+    <h1>GrizzFlow's <span>Garage</span></h1>
+    <p>South Bay Garage Cleanup from $350</p>
+    <div class="badge">Same-Week Scheduling</div>
+  </div>
+</body>
+</html>

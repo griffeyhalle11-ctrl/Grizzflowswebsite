@@ -1,0 +1,81 @@
+{
+  "url": "/garage-cleanup-torrance/",
+  "playbook_type": "LOCATIONS",
+  "seo": {
+    "title": "Garage Cleanup Torrance CA | Same-Week Service from $325",
+    "meta_description": "Torrance garage cleanup with flat-rate pricing. Professional cleanout, organization, and junk removal. Serving all Torrance neighborhoods. Free quote.",
+    "primary_keyword": "garage cleanup torrance",
+    "secondary_keywords": ["torrance garage organization", "junk removal torrance ca", "garage cleanout torrance"],
+    "search_intent": "transactional_local"
+  },
+  "content": {
+    "h1": "Garage Cleanup in Torrance",
+    "introduction": "Torrance homeowners know the value of a functional garage—especially with the city's car culture and DIY spirit. But when boxes stack up and projects get abandoned, that two-car garage becomes a zero-car storage disaster. GrizzFlow's Garage serves all Torrance neighborhoods with flat-rate cleanup from $325. We clear it, clean it, and organize what's left.",
+    "sections": [
+      {
+        "heading": "Torrance Garage Challenges",
+        "body": "Torrance has some of the best garage real estate in the South Bay—larger lots, more storage potential. But that extra space becomes a magnet for accumulation.\n\nWe regularly see Torrance garages with:\n• Workshop projects that never finished\n• Kids' stuff from three growth stages ago\n• Furniture waiting for 'someday'\n• Holiday decorations from multiple decades\n\nOne day of focused work changes everything."
+      },
+      {
+        "heading": "Our Torrance Services",
+        "body": "**Complete Cleanout**: Remove everything, sort it, return only what you actually use.\n\n**Workshop Organization**: For the DIYers—tool storage that makes sense, workbench cleared, supplies organized.\n\n**Deep Cleaning**: Floors degreased, walls wiped, cobwebs cleared.\n\n**Junk Removal**: Everything you don't want hauled away. Donation coordination included."
+      },
+      {
+        "heading": "Torrance Pricing",
+        "body": "Flat rates—no hourly billing:\n\n• **Light ($325)**: 1-car, light clutter\n• **Standard ($475)**: 2-car or heavy 1-car\n• **Deep ($625)**: Packed garages, major cleanout\n• **Total ($800+)**: 3-car, extreme situations, multi-day\n\nAll pricing includes labor, supplies, and junk hauling."
+      },
+      {
+        "heading": "Torrance Neighborhoods We Serve",
+        "body": "We cover all of Torrance:\n\n• Old Torrance\n• Walteria\n• Hollywood Riviera\n• Southwood\n• North Torrance\n• West Torrance\n• Southeast Torrance\n• Del Amo area\n\nAlso serving Redondo Beach, Lomita, Gardena, and Carson."
+      },
+      {
+        "heading": "Book Your Torrance Cleanup",
+        "body": "**Step 1**: Call (509) 860-9850 or submit our online form.\n\n**Step 2**: We confirm details and schedule within 24 hours.\n\n**Step 3**: We show up, you direct, we work.\n\n**Step 4**: Walk into your organized garage. Actually park inside."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Do you handle workshop cleanups in Torrance?",
+        "answer": "Yes. We regularly organize workshops, clear old projects, and set up functional tool storage. Many Torrance clients are DIYers who need their workspace reclaimed."
+      },
+      {
+        "question": "How much does Torrance garage cleanup cost?",
+        "answer": "Our flat-rate packages start at $325 for light 1-car cleanups and go up to $800+ for extreme situations. Most Torrance 2-car garages fall in the $475-$625 range."
+      },
+      {
+        "question": "Can you remove old appliances and large items?",
+        "answer": "Yes. Old refrigerators, freezers, water heaters, furniture—we haul it all as part of your flat rate."
+      },
+      {
+        "question": "What areas around Torrance do you serve?",
+        "answer": "We serve all of Torrance plus Redondo Beach, Lomita, Gardena, Carson, Hawthorne, and the broader South Bay."
+      },
+      {
+        "question": "How quickly can you schedule a Torrance job?",
+        "answer": "We typically have same-week availability. For urgent situations, we can often do next-day service."
+      }
+    ],
+    "call_to_action": "Torrance homeowners: stop tripping over the mess. Call (509) 860-9850 or get your free quote. Same-week scheduling available."
+  },
+  "schema": {
+    "type": "LocalBusiness",
+    "structured_data": {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "GrizzFlow's Garage - Torrance",
+      "telephone": "+1-509-860-9850",
+      "areaServed": {"@type": "City", "name": "Torrance", "containedIn": "California"},
+      "priceRange": "$325-$800+"
+    }
+  },
+  "internal_links": [
+    {"url": "/", "anchor": "GrizzFlow's Garage"},
+    {"url": "/garage-cleanup-redondo-beach/", "anchor": "Redondo Beach"},
+    {"url": "/garage-cleanup-gardena/", "anchor": "Gardena"},
+    {"url": "/garage-cleanup-lomita/", "anchor": "Lomita"},
+    {"url": "/garage-cleanup-for-homeowners/", "anchor": "homeowner garage cleanup"},
+    {"url": "/#pricing", "anchor": "view pricing"}
+  ],
+  "related_pages": ["/garage-cleanup-redondo-beach/", "/garage-cleanup-gardena/", "/garage-cleanup-lomita/"],
+  "word_count": 924
+}

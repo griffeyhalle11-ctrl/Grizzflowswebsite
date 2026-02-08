@@ -1,0 +1,135 @@
+{
+  "url": "/garage-cleanup-hermosa-beach/",
+  "playbook_type": "LOCATIONS",
+  "seo": {
+    "title": "Garage Cleanup Hermosa Beach | Same-Week Service from $325",
+    "meta_description": "Professional garage cleanup in Hermosa Beach. Flat-rate pricing, junk removal included. We clean, organize, and haul away the mess. Get your free quote today.",
+    "primary_keyword": "garage cleanup hermosa beach",
+    "secondary_keywords": [
+      "hermosa beach garage organization",
+      "junk removal hermosa beach",
+      "garage cleanout hermosa beach",
+      "hermosa beach garage cleaning service"
+    ],
+    "search_intent": "transactional_local"
+  },
+  "content": {
+    "h1": "Garage Cleanup in Hermosa Beach",
+    "introduction": "Living in Hermosa Beach means beach cruisers, surfboards, and outdoor gear—but when your garage becomes a storage disaster, it's time to call GrizzFlow's Garage. We specialize in garage cleanup for Hermosa Beach homeowners with flat-rate pricing starting at $325. No hourly rates, no surprise fees. Just a clean garage where you can actually park your car.",
+    "sections": [
+      {
+        "heading": "Why Hermosa Beach Homeowners Choose Us",
+        "body": "Hermosa Beach homes are valuable—and so is every square foot of space. Most Hermosa garages we see are packed with beach gear, holiday decorations, and years of 'I'll deal with it later' boxes. We get it. Life's busy when you're this close to the beach.\n\nOur team handles the heavy lifting, decision-making fatigue, and dump runs so you don't have to. We show up, you point at what stays and what goes, and we handle the rest. By the end of the day, you'll have a functional garage again."
+      },
+      {
+        "heading": "Our Hermosa Beach Garage Cleanup Services",
+        "body": "**Complete Cleanout**: We remove everything, clean the space floor to ceiling, and only put back what you want to keep.\n\n**Organization**: Strategic placement so you can actually find your tools, holiday decorations, and beach gear when you need them.\n\n**Junk Removal**: All unwanted items hauled away—included in your flat rate. No separate dump fees, no rental trucks.\n\n**Donation Coordination**: Items in good condition can be donated to local Hermosa Beach charities."
+      },
+      {
+        "heading": "Hermosa Beach Pricing",
+        "body": "We keep it simple with flat-rate packages:\n\n• **Light ($325)**: 1-car garage, light clutter\n• **Standard ($475)**: 2-car garage or heavy 1-car\n• **Deep ($625)**: Major cleanouts, any size\n• **Total ($800+)**: Extreme situations, multi-day if needed\n\nPrice includes all labor, cleaning supplies, and junk hauling. What you see is what you pay."
+      },
+      {
+        "heading": "Service Area in Hermosa Beach",
+        "body": "We serve all of Hermosa Beach including:\n\n• Hermosa Beach downtown\n• The Strand\n• North Hermosa\n• South Hermosa\n• Hermosa Valley\n• East Hermosa\n\nWe also serve neighboring Manhattan Beach, Redondo Beach, and the greater South Bay area."
+      },
+      {
+        "heading": "How It Works",
+        "body": "**Step 1: Book** - Fill out our quick form or call (509) 860-9850. We'll get back to you within 24 hours to schedule.\n\n**Step 2: We Work** - We show up on time, you walk us through what stays and what goes. Grab a coffee while we handle the rest.\n\n**Step 3: You Park** - Walk into your clean, organized garage. Actually use the space you're paying property taxes on."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How quickly can you clean my Hermosa Beach garage?",
+        "answer": "Most Hermosa Beach garage cleanups are completed in a single day. We typically have same-week availability, and for urgent situations, we can often accommodate next-day service."
+      },
+      {
+        "question": "Do you handle large items like old surfboards and beach equipment?",
+        "answer": "Absolutely. We regularly haul away surfboards, paddleboards, beach chairs, umbrellas, and all types of outdoor equipment. If it fits in your garage, we can remove it."
+      },
+      {
+        "question": "What happens to the junk you remove?",
+        "answer": "We sort everything. Recyclables go to recycling facilities, donatable items go to local charities, and the rest is properly disposed of at licensed facilities. We handle all of this—it's included in your flat rate."
+      },
+      {
+        "question": "Do I need to be home during the cleanup?",
+        "answer": "We recommend being present at the start so you can walk us through what to keep and what to remove. After that, you're free to go about your day. Many Hermosa Beach clients head to the beach while we work."
+      },
+      {
+        "question": "Is there anything you won't remove?",
+        "answer": "We don't handle hazardous materials like chemicals, paint, or asbestos. We also can't remove items that require special permits. Everything else is fair game."
+      }
+    ],
+    "call_to_action": "Ready to reclaim your Hermosa Beach garage? Get your free quote today. Call (509) 860-9850 or fill out our form. Same-week scheduling available."
+  },
+  "schema": {
+    "type": "LocalBusiness",
+    "structured_data": {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "GrizzFlow's Garage - Hermosa Beach",
+      "description": "Professional garage cleanup and organization service in Hermosa Beach, CA",
+      "url": "https://grizzflowsgarage.com/garage-cleanup-hermosa-beach/",
+      "telephone": "+1-509-860-9850",
+      "email": "grizzflowsgarage@gmail.com",
+      "areaServed": {
+        "@type": "City",
+        "name": "Hermosa Beach",
+        "containedIn": {
+          "@type": "State",
+          "name": "California"
+        }
+      },
+      "priceRange": "$325-$800+",
+      "paymentAccepted": "Cash, Credit Card, Venmo, Zelle",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Garage Cleanup Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Light Garage Cleanup",
+            "price": "325",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "name": "Standard Garage Cleanup",
+            "price": "475",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "name": "Deep Garage Cleanup",
+            "price": "625",
+            "priceCurrency": "USD"
+          }
+        ]
+      }
+    }
+  },
+  "internal_links": [
+    {"url": "/", "anchor": "GrizzFlow's Garage"},
+    {"url": "/garage-cleanup-manhattan-beach/", "anchor": "Manhattan Beach garage cleanup"},
+    {"url": "/garage-cleanup-redondo-beach/", "anchor": "Redondo Beach garage cleanup"},
+    {"url": "/garage-cleanup-for-homeowners/", "anchor": "garage cleanup for homeowners"},
+    {"url": "/#pricing", "anchor": "view all pricing"}
+  ],
+  "related_pages": [
+    "/garage-cleanup-manhattan-beach/",
+    "/garage-cleanup-redondo-beach/",
+    "/examples/hermosa-beach-2car-transformation/"
+  ],
+  "data_requirements_used": [
+    "locations.hermosa-beach",
+    "services.garage-cleanup",
+    "pricing.packages"
+  ],
+  "word_count": 987,
+  "validation": {
+    "unique_slug": true,
+    "minimum_word_count": true,
+    "internal_links_minimum": true,
+    "faq_minimum": true
+  }
+}

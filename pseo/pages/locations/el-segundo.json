@@ -1,0 +1,80 @@
+{
+  "url": "/garage-cleanup-el-segundo/",
+  "playbook_type": "LOCATIONS",
+  "seo": {
+    "title": "Garage Cleanup El Segundo | Flat-Rate from $325",
+    "meta_description": "El Segundo garage cleanup with flat-rate pricing. Cleanout, organization, junk removal included. Same-week scheduling. Get your free quote.",
+    "primary_keyword": "garage cleanup el segundo",
+    "secondary_keywords": ["el segundo garage organization", "junk removal el segundo", "garage cleanout el segundo ca"],
+    "search_intent": "transactional_local"
+  },
+  "content": {
+    "h1": "Garage Cleanup in El Segundo",
+    "introduction": "El Segundo residents work hard—aerospace, tech, entertainment. You don't have time to spend a weekend hauling junk to the dump. GrizzFlow's Garage offers flat-rate garage cleanup for El Segundo homeowners starting at $325. We show up, you point at what goes, and by end of day you've got a functional garage again.",
+    "sections": [
+      {
+        "heading": "The El Segundo Professional's Garage Problem",
+        "body": "El Segundo is full of busy professionals. High incomes, nice homes, demanding jobs. The garage becomes the 'deal with it later' zone.\n\nYears of 'later' adds up: moving boxes never unpacked, kids' old gear, that treadmill you used twice, holiday decorations from three houses ago.\n\nYou could spend your weekend fixing it. Or you could call us and have it done while you're at work."
+      },
+      {
+        "heading": "El Segundo Garage Services",
+        "body": "**Full Cleanout**: Everything comes out. We sort, you decide, we execute.\n\n**Organization**: Strategic zones for tools, sports gear, seasonal items. Actually find things when you need them.\n\n**Junk Removal**: Included in every package. No dump runs for you.\n\n**Same-Week Service**: Most El Segundo jobs scheduled within the week."
+      },
+      {
+        "heading": "El Segundo Pricing",
+        "body": "Flat-rate packages:\n\n• **Light ($325)**: 1-car, manageable clutter\n• **Standard ($475)**: 2-car or packed 1-car\n• **Deep ($625)**: Major cleanout\n• **Total ($800+)**: Extreme situations\n\nAll-inclusive: labor, supplies, hauling. No surprises."
+      },
+      {
+        "heading": "El Segundo Areas Served",
+        "body": "We cover all of El Segundo:\n\n• Downtown El Segundo\n• East El Segundo\n• El Segundo Beach/Dunes\n• Residential areas near Sepulveda\n\nAlso serving Manhattan Beach, Hawthorne, Inglewood, and LAX area."
+      },
+      {
+        "heading": "How to Book",
+        "body": "**1. Contact**: Call (509) 860-9850 or use our online form.\n\n**2. Schedule**: We confirm within 24 hours.\n\n**3. Access**: Give us garage access (many El Segundo clients give us a code and go to work).\n\n**4. Done**: Come home to a clean, organized garage."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Can you work while I'm at the office?",
+        "answer": "Yes. Many El Segundo clients give us garage access and go about their day. We just need 15-30 minutes of direction at the start—this can be done before work or we can discuss by phone/video."
+      },
+      {
+        "question": "How much does El Segundo garage cleanup cost?",
+        "answer": "Flat rates from $325 to $800+. Most El Segundo 2-car garages fall in the $475-$625 range. Price includes all labor and junk removal."
+      },
+      {
+        "question": "Do you work weekends?",
+        "answer": "Yes. Weekend appointments available for El Segundo residents who prefer to be home during the cleanup."
+      },
+      {
+        "question": "What neighborhoods around El Segundo do you serve?",
+        "answer": "We cover El Segundo plus Manhattan Beach, Hawthorne, Inglewood, Playa del Rey, and the broader South Bay/LAX area."
+      },
+      {
+        "question": "How long does an El Segundo garage cleanup take?",
+        "answer": "Most jobs complete in 4-8 hours depending on size and clutter level. We'll give you a time estimate with your quote."
+      }
+    ],
+    "call_to_action": "El Segundo professionals: reclaim your garage without losing your weekend. Call (509) 860-9850 or get your free quote online."
+  },
+  "schema": {
+    "type": "LocalBusiness",
+    "structured_data": {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "GrizzFlow's Garage - El Segundo",
+      "telephone": "+1-509-860-9850",
+      "areaServed": {"@type": "City", "name": "El Segundo", "containedIn": "California"},
+      "priceRange": "$325-$800+"
+    }
+  },
+  "internal_links": [
+    {"url": "/", "anchor": "GrizzFlow's Garage"},
+    {"url": "/garage-cleanup-manhattan-beach/", "anchor": "Manhattan Beach"},
+    {"url": "/garage-cleanup-hawthorne/", "anchor": "Hawthorne"},
+    {"url": "/garage-cleanup-for-busy-professionals/", "anchor": "busy professionals"},
+    {"url": "/#pricing", "anchor": "pricing"}
+  ],
+  "related_pages": ["/garage-cleanup-manhattan-beach/", "/garage-cleanup-hawthorne/", "/garage-cleanup-for-busy-professionals/"],
+  "word_count": 897
+}
