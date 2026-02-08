@@ -3,23 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GrizzFlow's Garage | South Bay Garage Cleanup from $350</title>
-    <meta name="description" content="Professional garage cleanup in South Bay LA. Flat-rate packages from $350. We clean, organize, and haul away the junk. Same-week scheduling. Get your free quote.">
-    <meta name="keywords" content="garage cleanup, garage organization, junk removal, South Bay, Hermosa Beach, Manhattan Beach">
+    <title>GrizzFlow's Garage | South Bay Garage Cleanup from $399</title>
+    <meta name="description" content="Professional garage cleanup in South Bay LA. Flat-rate packages from $399. We clean, organize, and haul away the junk. Same-week scheduling. Get your free quote.">
+    <meta name="keywords" content="garage cleanup, garage organization, junk removal, South Bay, Hermosa Beach, Manhattan Beach, Redondo Beach, Torrance">
     <link rel="canonical" href="https://grizzflowsgarage.com/">
     
+    <!-- Open Graph -->
     <meta property="og:title" content="GrizzFlow's Garage | South Bay Garage Cleanup">
-    <meta property="og:description" content="Professional garage cleanup. Flat-rate from $350. Junk removal included.">
+    <meta property="og:description" content="Professional garage cleanup. Flat-rate from $399. Junk removal included.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://grizzflowsgarage.com/">
+    <meta property="og:image" content="https://grizzflowsgarage.com/assets/hero.png">
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
+    <!-- GSAP for animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'rubik': ['Rubik', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-dark': '#0f1419',
+                        'brand-darker': '#0a0d10',
+                        'btn-dark': '#161a20',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Schema Markup -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -31,7 +58,7 @@
           "description": "Professional garage cleanup and organization service in South Bay Los Angeles. We transform cluttered garages into functional spaces and haul away junk.",
           "url": "https://grizzflowsgarage.com",
           "telephone": "+1-509-860-9850",
-          "email": "grizzflowsgarage@gmail.com",
+          "email": "griffeyhalle11@gmail.com",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Hermosa Beach",
@@ -39,1354 +66,1109 @@
             "addressCountry": "US"
           },
           "areaServed": [
-            {"@type": "City", "name": "Hermosa Beach", "containedInPlace": {"@type": "State", "name": "California"}},
-            {"@type": "City", "name": "Manhattan Beach", "containedInPlace": {"@type": "State", "name": "California"}},
-            {"@type": "City", "name": "Redondo Beach", "containedInPlace": {"@type": "State", "name": "California"}},
-            {"@type": "City", "name": "Torrance", "containedInPlace": {"@type": "State", "name": "California"}},
-            {"@type": "City", "name": "El Segundo", "containedInPlace": {"@type": "State", "name": "California"}},
-            {"@type": "City", "name": "Palos Verdes", "containedInPlace": {"@type": "State", "name": "California"}}
+            {"@type": "City", "name": "Hermosa Beach"},
+            {"@type": "City", "name": "Manhattan Beach"},
+            {"@type": "City", "name": "Redondo Beach"},
+            {"@type": "City", "name": "Torrance"},
+            {"@type": "City", "name": "El Segundo"},
+            {"@type": "City", "name": "Palos Verdes"}
           ],
-          "priceRange": "$350-$950+",
+          "priceRange": "$399-$1100+",
           "openingHours": "Mo-Su 08:00-18:00",
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Garage Cleanup Services",
             "itemListElement": [
-              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Light Cleanup", "description": "Basic cleanup for 1-car garages with light clutter"}, "price": "350", "priceCurrency": "USD"},
-              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Standard Cleanup", "description": "Full cleanup and organization for 2-car garage or heavy 1-car"}, "price": "525", "priceCurrency": "USD"},
-              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Deep Cleanup", "description": "Major cleanouts requiring extra attention"}, "price": "695", "priceCurrency": "USD"},
-              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Total Cleanup", "description": "Complete garage transformation for extreme situations"}, "price": "950", "priceCurrency": "USD"}
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Light Cleanup"}, "price": "399", "priceCurrency": "USD"},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Standard Cleanup"}, "price": "575", "priceCurrency": "USD"},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Deep Cleanup"}, "price": "750", "priceCurrency": "USD"},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Total Transformation"}, "price": "1100", "priceCurrency": "USD"}
             ]
           }
         },
         {
-          "@type": "WebSite",
-          "@id": "https://grizzflowsgarage.com/#website",
-          "url": "https://grizzflowsgarage.com",
-          "name": "GrizzFlow's Garage",
-          "publisher": {"@id": "https://grizzflowsgarage.com/#business"}
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How much does garage cleanup cost?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our flat-rate packages start at $399 for a light cleanup and go up to $1,100+ for complete transformations. Pricing depends on garage size and current condition. Junk hauling is included in all packages."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What areas do you serve?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We serve the entire South Bay area including Hermosa Beach, Manhattan Beach, Redondo Beach, Torrance, El Segundo, Palos Verdes, Hawthorne, Lawndale, and Gardena."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does a garage cleanup take?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Most cleanups take 2-6 hours depending on the package. A light cleanup takes 2-3 hours, while a full transformation can take a full day."
+              }
+            }
+          ]
         }
       ]
     }
     </script>
     
     <style>
-        :root {
-            --bg-dark: #080a06;
-            --bg-main: #0c0e09;
-            --bg-card: #12150f;
-            --bg-elevated: #181c14;
-            
-            --text-white: #f5f5f0;
-            --text-gray: #9a9a8e;
-            --text-muted: #5a5a50;
-            
-            --camo-olive: #5c7a2e;
-            --camo-forest: #3d5a1f;
-            --camo-tan: #a89068;
-            --camo-brown: #6b5540;
-            --camo-dark: #2a3820;
-            
-            --accent: #7fa035;
-            --accent-hover: #95b845;
-            
-            --border: #252a1f;
-            --border-light: #353d2a;
-        }
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
         html { scroll-behavior: smooth; }
         
-        body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            background: var(--bg-main);
-            color: var(--text-white);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        
-        /* CAMO BACKGROUND */
-        .camo-pattern {
-            position: fixed;
-            inset: 0;
-            z-index: 0;
-            pointer-events: none;
-            opacity: 0.5;
-            background:
-                /* Large blobs */
-                radial-gradient(ellipse 50% 40% at 10% 20%, var(--camo-forest) 0%, transparent 70%),
-                radial-gradient(ellipse 45% 50% at 90% 10%, var(--camo-olive) 0%, transparent 65%),
-                radial-gradient(ellipse 55% 35% at 30% 60%, var(--camo-brown) 0%, transparent 60%),
-                radial-gradient(ellipse 40% 45% at 70% 50%, var(--camo-dark) 0%, transparent 70%),
-                radial-gradient(ellipse 50% 40% at 50% 90%, var(--camo-forest) 0%, transparent 65%),
-                radial-gradient(ellipse 35% 55% at 85% 75%, var(--camo-tan) 0%, transparent 55%),
-                /* Medium patches */
-                radial-gradient(ellipse 25% 20% at 20% 40%, var(--camo-olive) 0%, transparent 70%),
-                radial-gradient(ellipse 20% 25% at 60% 30%, var(--camo-dark) 0%, transparent 65%),
-                radial-gradient(ellipse 30% 20% at 40% 75%, var(--camo-forest) 0%, transparent 60%),
-                radial-gradient(ellipse 22% 28% at 80% 85%, var(--camo-brown) 0%, transparent 55%),
-                /* Small spots */
-                radial-gradient(ellipse 15% 12% at 15% 70%, var(--camo-tan) 0%, transparent 70%),
-                radial-gradient(ellipse 12% 15% at 55% 55%, var(--camo-olive) 0%, transparent 65%),
-                radial-gradient(ellipse 10% 10% at 95% 40%, var(--camo-forest) 0%, transparent 60%);
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        /* NAV */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: 16px 0;
-            background: rgba(8, 10, 6, 0.85);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border);
-        }
-        
-        .nav-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            text-decoration: none;
-            color: var(--text-white);
-        }
-        
-        .logo-icon {
-            width: 44px;
-            height: 44px;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-        
-        .logo-icon svg {
-            width: 100%;
-            height: 100%;
-        }
-        
-        .logo-text {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 20px;
-            font-weight: 700;
-        }
-        
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 36px;
-            list-style: none;
-        }
-        
-        .nav-links a {
-            color: var(--text-gray);
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-        
-        .nav-links a:hover { color: var(--text-white); }
-        
-        .nav-cta {
-            background: var(--accent);
-            color: var(--bg-dark);
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 14px;
-            text-decoration: none;
-            transition: all 0.2s;
-        }
-        
-        .nav-cta:hover {
-            background: var(--accent-hover);
-            transform: translateY(-2px);
-        }
-        
-        /* HERO */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 140px 0 100px;
-            position: relative;
-        }
-        
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-        
-        .hero-content { max-width: 580px; }
-        
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(127, 160, 53, 0.12);
-            border: 1px solid rgba(127, 160, 53, 0.25);
-            padding: 10px 18px;
-            border-radius: 100px;
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--accent);
-            margin-bottom: 28px;
-        }
-        
-        .hero-badge::before {
-            content: '';
-            width: 8px;
-            height: 8px;
-            background: var(--accent);
-            border-radius: 50%;
-            animation: pulse 2s ease-in-out infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.5; transform: scale(0.9); }
-        }
-        
-        .hero h1 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(40px, 6vw, 64px);
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 24px;
-            letter-spacing: -0.02em;
-        }
-        
-        .hero h1 span {
-            color: var(--accent);
-        }
-        
-        .hero-desc {
-            font-size: 18px;
-            color: var(--text-gray);
-            line-height: 1.7;
-            margin-bottom: 40px;
-        }
-        
-        .hero-ctas {
-            display: flex;
-            gap: 16px;
-            margin-bottom: 56px;
-        }
-        
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: var(--accent);
-            color: var(--bg-dark);
-            padding: 18px 32px;
-            border-radius: 10px;
-            font-weight: 700;
-            font-size: 16px;
-            text-decoration: none;
-            transition: all 0.25s;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .btn-primary:hover {
-            background: var(--accent-hover);
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(127, 160, 53, 0.25);
-        }
-        
-        .btn-primary svg {
-            transition: transform 0.2s;
-        }
-        
-        .btn-primary:hover svg {
-            transform: translateX(4px);
-        }
-        
-        .btn-secondary {
-            display: inline-flex;
-            align-items: center;
-            background: transparent;
-            color: var(--text-white);
-            padding: 18px 32px;
-            border-radius: 10px;
-            font-weight: 600;
-            font-size: 16px;
-            text-decoration: none;
-            border: 2px solid var(--border-light);
-            transition: all 0.25s;
-        }
-        
-        .btn-secondary:hover {
-            border-color: var(--accent);
-            background: rgba(127, 160, 53, 0.08);
-        }
-        
-        /* Trust bar */
-        .trust-bar {
-            display: flex;
-            gap: 40px;
-            padding-top: 32px;
-            border-top: 1px solid var(--border);
-        }
-        
-        .trust-item {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-        
-        .trust-icon {
-            width: 48px;
-            height: 48px;
-            background: rgba(127, 160, 53, 0.12);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .trust-icon svg {
-            width: 22px;
-            height: 22px;
-            stroke: var(--accent);
-            stroke-width: 2;
-            fill: none;
-        }
-        
-        .trust-text strong {
-            display: block;
-            font-size: 17px;
-            color: var(--text-white);
-            margin-bottom: 2px;
-        }
-        
-        .trust-text span {
-            font-size: 13px;
-            color: var(--text-muted);
-        }
-        
-        /* Hero visual */
-        .hero-visual {
-            position: relative;
-            height: 500px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .hero-image {
-            width: 100%;
-            height: 100%;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero-image::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: 
-                radial-gradient(ellipse 60% 50% at 30% 40%, var(--camo-forest) 0%, transparent 60%),
-                radial-gradient(ellipse 50% 60% at 70% 60%, var(--camo-brown) 0%, transparent 50%);
-            opacity: 0.4;
-        }
-        
-        .bear-mascot {
-            width: 280px;
-            height: 280px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .floating-badge {
-            position: absolute;
-            background: var(--bg-elevated);
-            border: 1px solid var(--border-light);
-            padding: 14px 20px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 14px;
-            font-weight: 600;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-        }
-        
-        .floating-badge.top-right {
-            top: 30px;
-            right: -20px;
-        }
-        
-        .floating-badge.bottom-left {
-            bottom: 40px;
-            left: -30px;
-        }
-        
-        .floating-badge svg {
-            width: 20px;
-            height: 20px;
-            stroke: var(--accent);
-            fill: none;
-        }
-        
-        /* SECTIONS */
-        section {
-            padding: 120px 0;
-            position: relative;
-        }
-        
-        .section-dark {
-            background: var(--bg-dark);
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 72px;
-        }
-        
-        .section-tag {
-            display: inline-block;
-            font-size: 12px;
-            font-weight: 700;
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            margin-bottom: 16px;
-        }
-        
-        .section-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(32px, 5vw, 48px);
-            font-weight: 700;
-            letter-spacing: -0.02em;
-        }
-        
-        /* Problem/Solution */
-        .problem-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 48px;
-        }
-        
-        .problem-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 40px;
-        }
-        
-        .problem-card h3 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 24px;
-            margin-bottom: 28px;
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-        
-        .problem-card h3 .icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-        }
-        
-        .problem-card.problem h3 .icon {
-            background: rgba(200, 80, 80, 0.15);
-        }
-        
-        .problem-card.solution h3 .icon {
-            background: rgba(127, 160, 53, 0.15);
-        }
-        
-        .problem-list {
-            list-style: none;
-        }
-        
-        .problem-list li {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            padding: 16px 0;
-            border-bottom: 1px solid var(--border);
-            color: var(--text-gray);
-            font-size: 16px;
-        }
-        
-        .problem-list li:last-child { border-bottom: none; }
-        
-        .problem-list li .marker {
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            flex-shrink: 0;
-        }
-        
-        .problem-card.problem .marker {
-            background: rgba(200, 80, 80, 0.15);
-            color: #c85050;
-        }
-        
-        .problem-card.solution .marker {
-            background: rgba(127, 160, 53, 0.15);
-            color: var(--accent);
-        }
-        
-        /* How it works */
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-        }
-        
-        .step-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 48px 36px;
-            text-align: center;
-            transition: all 0.3s;
-        }
-        
-        .step-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--accent);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-        }
-        
-        .step-num {
-            width: 64px;
-            height: 64px;
-            background: linear-gradient(135deg, var(--accent) 0%, var(--camo-forest) 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 28px;
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 26px;
-            font-weight: 800;
-            color: var(--bg-dark);
-        }
-        
-        .step-card h3 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 22px;
-            margin-bottom: 14px;
-        }
-        
-        .step-card p {
-            color: var(--text-gray);
-            font-size: 15px;
-            line-height: 1.7;
-        }
-        
-        /* Pricing */
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-        }
-        
-        .price-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 36px 28px;
-            transition: all 0.3s;
-            position: relative;
-        }
-        
-        .price-card:hover {
-            border-color: var(--text-muted);
-        }
-        
-        .price-card.featured {
-            border: 2px solid var(--accent);
-            transform: scale(1.03);
-        }
-        
-        .price-card.featured::before {
-            content: 'Most Popular';
-            position: absolute;
-            top: -14px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--accent);
-            color: var(--bg-dark);
-            padding: 6px 18px;
-            border-radius: 100px;
-            font-size: 12px;
-            font-weight: 700;
-        }
-        
-        .price-tier {
-            font-size: 13px;
-            font-weight: 700;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 8px;
-        }
-        
-        .price-amount {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 48px;
-            font-weight: 800;
-            margin-bottom: 6px;
-        }
-        
-        .price-desc {
-            font-size: 14px;
-            color: var(--text-muted);
-            margin-bottom: 28px;
-            padding-bottom: 28px;
-            border-bottom: 1px solid var(--border);
-        }
-        
-        .price-features {
-            list-style: none;
-            margin-bottom: 32px;
-        }
-        
-        .price-features li {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 10px 0;
-            font-size: 14px;
-            color: var(--text-gray);
-        }
-        
-        .price-features li::before {
-            content: '✓';
-            color: var(--accent);
-            font-weight: bold;
-        }
-        
-        .price-cta {
-            width: 100%;
-            padding: 16px;
-            background: var(--bg-elevated);
-            border: 1px solid var(--border);
-            color: var(--text-white);
-            border-radius: 10px;
-            font-weight: 600;
-            font-size: 14px;
-            cursor: pointer;
-            transition: all 0.2s;
-            font-family: inherit;
-        }
-        
-        .price-cta:hover {
-            background: var(--accent);
-            border-color: var(--accent);
-            color: var(--bg-dark);
-        }
-        
-        .price-card.featured .price-cta {
-            background: var(--accent);
-            border-color: var(--accent);
-            color: var(--bg-dark);
-        }
-        
-        /* Service areas */
-        .areas-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-        
-        .area-card {
-            display: block;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 28px;
-            text-decoration: none;
-            color: var(--text-white);
-            transition: all 0.2s;
-        }
-        
-        .area-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-4px);
-        }
-        
-        .area-card h4 {
-            font-size: 18px;
-            margin-bottom: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        
-        .area-card h4 svg {
-            width: 18px;
-            height: 18px;
-            stroke: var(--accent);
-            fill: none;
-            opacity: 0;
-            transition: all 0.2s;
-            transform: translateX(-4px);
-        }
-        
-        .area-card:hover h4 svg {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        
-        .area-card p {
-            font-size: 14px;
-            color: var(--text-muted);
-        }
-        
-        /* Contact */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.1fr;
-            gap: 60px;
-        }
-        
-        .contact-info h2 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 40px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-        
-        .contact-info > p {
-            font-size: 18px;
-            color: var(--text-gray);
-            margin-bottom: 40px;
-            line-height: 1.7;
-        }
-        
-        .contact-methods {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-        
-        .contact-method {
-            display: flex;
-            align-items: center;
-            gap: 18px;
-            padding: 22px;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            text-decoration: none;
-            color: var(--text-white);
-            transition: all 0.2s;
-        }
-        
-        .contact-method:hover {
-            border-color: var(--accent);
-        }
-        
-        .method-icon {
-            width: 52px;
-            height: 52px;
-            background: rgba(127, 160, 53, 0.12);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .method-icon svg {
-            width: 24px;
-            height: 24px;
-            stroke: var(--accent);
-            fill: none;
-            stroke-width: 2;
-        }
-        
-        .method-label {
-            font-size: 13px;
-            color: var(--text-muted);
-            margin-bottom: 2px;
-        }
-        
-        .method-value {
-            font-weight: 600;
-            font-size: 17px;
-        }
-        
-        /* Form */
-        .contact-form {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 24px;
-            padding: 44px;
-        }
-        
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 18px;
-        }
-        
-        .form-group {
-            margin-bottom: 18px;
-        }
-        
-        .form-group label {
-            display: block;
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--text-gray);
-            margin-bottom: 10px;
-        }
-        
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 16px 18px;
-            background: var(--bg-main);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            color: var(--text-white);
-            font-family: inherit;
-            font-size: 15px;
-            transition: border-color 0.2s;
-        }
-        
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--accent);
-        }
-        
-        .form-group textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-        
-        .form-submit {
-            width: 100%;
-            padding: 18px;
-            background: var(--accent);
-            border: none;
-            border-radius: 10px;
-            color: var(--bg-dark);
-            font-family: inherit;
-            font-weight: 700;
-            font-size: 16px;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        
-        .form-submit:hover {
-            background: var(--accent-hover);
-            transform: translateY(-2px);
-        }
-        
-        /* Footer */
-        footer {
-            padding: 60px 0 40px;
-            border-top: 1px solid var(--border);
-        }
-        
-        .footer-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 40px;
-            padding-bottom: 40px;
-            border-bottom: 1px solid var(--border);
-        }
-        
-        .footer-links {
-            display: flex;
-            gap: 36px;
-        }
-        
-        .footer-links a {
-            color: var(--text-gray);
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.2s;
-        }
-        
-        .footer-links a:hover { color: var(--text-white); }
-        
-        .footer-bottom {
-            text-align: center;
-        }
-        
-        .footer-bottom p {
-            color: var(--text-muted);
-            font-size: 13px;
-        }
-        
-        .footer-areas {
-            margin-top: 10px;
-            color: var(--text-muted);
-            font-size: 12px;
-        }
-        
-        /* MOBILE */
-        @media (max-width: 1024px) {
-            .hero-grid { grid-template-columns: 1fr; }
-            .hero-visual { display: none; }
-            .pricing-grid { grid-template-columns: repeat(2, 1fr); }
-            .problem-grid { grid-template-columns: 1fr; }
-            .areas-grid { grid-template-columns: repeat(2, 1fr); }
-            .contact-grid { grid-template-columns: 1fr; }
+        .hero-headline {
+            line-height: 0.92;
+            letter-spacing: -4px;
         }
         
         @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hero h1 { font-size: 36px; }
-            .trust-bar { flex-direction: column; gap: 20px; }
-            .steps-grid { grid-template-columns: 1fr; }
-            .pricing-grid { grid-template-columns: 1fr; }
-            .areas-grid { grid-template-columns: 1fr; }
-            .form-row { grid-template-columns: 1fr; }
-            .hero-ctas { flex-direction: column; }
-            section { padding: 80px 0; }
-            .price-card.featured { transform: none; }
-            .footer-top { flex-direction: column; gap: 24px; }
+            .hero-headline { letter-spacing: -2px; }
+            
+            /* Mobile-specific fixes */
+            .grizzly-btn::after {
+                display: none; /* Hide bear emoji on mobile - clutters small buttons */
+            }
+            .grizzly-btn:hover {
+                padding-right: 2rem; /* Reset padding on mobile */
+            }
+            .claw-scratch::before {
+                display: none; /* Hide scratch on mobile */
+            }
+        }
+        
+        @media (max-width: 640px) {
+            /* Extra small mobile tweaks */
+            .hero-headline {
+                letter-spacing: -1px;
+            }
+        }
+        
+        .hero-overlay {
+            background: linear-gradient(
+                to right,
+                rgba(15, 20, 25, 0.95) 0%,
+                rgba(15, 20, 25, 0.85) 25%,
+                rgba(15, 20, 25, 0.5) 50%,
+                rgba(15, 20, 25, 0.2) 100%
+            );
+        }
+        
+        @media (max-width: 768px) {
+            .hero-overlay {
+                background: linear-gradient(
+                    to bottom,
+                    rgba(15, 20, 25, 0.7) 0%,
+                    rgba(15, 20, 25, 0.6) 50%,
+                    rgba(15, 20, 25, 0.9) 100%
+                );
+            }
+        }
+        
+        .cta-btn {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .cta-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(16, 185, 129, 0.3);
+        }
+        .cta-btn:active {
+            transform: scale(0.98);
+        }
+        
+        .text-shadow {
+            text-shadow: 0 4px 30px rgba(0,0,0,0.5);
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        /* FAQ Accordion */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+        
+        /* Form styling */
+        input, textarea, select {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: border-color 0.2s ease, background 0.2s ease;
+            font-size: 16px; /* Prevents iOS zoom on focus */
+            min-height: 48px; /* Touch-friendly height */
+        }
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #10b981;
+            background: rgba(255,255,255,0.08);
+        }
+        
+        /* Active states for touch */
+        .active\:scale-95:active {
+            transform: scale(0.95);
+        }
+        
+        /* Better tap highlight */
+        a, button {
+            -webkit-tap-highlight-color: rgba(16, 185, 129, 0.2);
+        }
+        
+        /* Launch banner animation */
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(16, 185, 129, 0.5); }
+        }
+        .launch-banner {
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+        
+        /* GRIZZLY THEME EFFECTS */
+        
+        /* Claw scratch marks */
+        .claw-scratch {
+            position: relative;
+        }
+        .claw-scratch::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            right: -30px;
+            width: 60px;
+            height: 80px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 80'%3E%3Cpath d='M10 5 L15 75 M25 0 L30 80 M45 5 L50 75' stroke='%2310b981' stroke-width='3' stroke-linecap='round' opacity='0.3'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            pointer-events: none;
+            opacity: 0;
+            transform: rotate(-15deg) scale(0.8);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .claw-scratch:hover::before {
+            opacity: 1;
+            transform: rotate(-15deg) scale(1);
+        }
+        
+        /* Bear mascot floating animation */
+        @keyframes bear-float {
+            0%, 100% { transform: translateY(0) rotate(-2deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
+        }
+        .bear-float {
+            animation: bear-float 3s ease-in-out infinite;
+        }
+        
+        /* Paw print trail */
+        .paw-print {
+            position: fixed;
+            width: 30px;
+            height: 30px;
+            pointer-events: none;
+            opacity: 0;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        
+        /* Grizzly hover growl effect on buttons */
+        .grizzly-btn {
+            position: relative;
+            overflow: hidden;
+        }
+        .grizzly-btn::after {
+            content: '🐻';
+            position: absolute;
+            right: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: right 0.3s ease;
+            font-size: 1.2em;
+        }
+        .grizzly-btn:hover::after {
+            right: 10px;
+        }
+        .grizzly-btn:hover {
+            padding-right: 45px;
+        }
+        
+        /* Claw swipe reveal on before/after */
+        .claw-reveal {
+            position: relative;
+            overflow: hidden;
+        }
+        .claw-reveal::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent 0%,
+                rgba(16, 185, 129, 0.1) 45%,
+                rgba(16, 185, 129, 0.3) 50%,
+                rgba(16, 185, 129, 0.1) 55%,
+                transparent 100%
+            );
+            transition: left 0.6s ease;
+        }
+        .claw-reveal:hover::after {
+            left: 100%;
+        }
+        
+        /* Shake animation for CTA */
+        @keyframes bear-shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-2px) rotate(-1deg); }
+            20%, 40%, 60%, 80% { transform: translateX(2px) rotate(1deg); }
+        }
+        .shake-on-hover:hover {
+            animation: bear-shake 0.5s ease-in-out;
+        }
+        
+        /* Section divider with claw marks */
+        .claw-divider {
+            height: 40px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 40'%3E%3Cpath d='M20 5 L25 35 M35 0 L40 40 M55 5 L60 35 M90 8 L95 32 M105 3 L110 37 M125 8 L130 32' stroke='%2310b981' stroke-width='2' stroke-linecap='round' opacity='0.15'/%3E%3C/svg%3E");
+            background-repeat: repeat-x;
+            background-position: center;
+        }
+        
+        /* Roar text effect */
+        @keyframes roar-scale {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .roar-text:hover {
+            animation: roar-scale 0.3s ease-in-out;
         }
     </style>
 </head>
-<body>
-    <div class="camo-pattern"></div>
+<body class="font-rubik bg-brand-darker text-white">
     
-    <!-- NAV -->
-    <nav>
-        <div class="container nav-inner">
-            <a href="/" class="logo">
-                <div class="logo-icon">
-                    <svg viewBox="0 0 44 44" fill="none">
-                        <rect width="44" height="44" rx="10" fill="url(#logo-grad)"/>
-                        <circle cx="14" cy="12" r="6" fill="#2a3820"/>
-                        <circle cx="30" cy="12" r="6" fill="#2a3820"/>
-                        <ellipse cx="22" cy="24" rx="14" ry="12" fill="#2a3820"/>
-                        <circle cx="16" cy="21" r="3" fill="#f5f5f0"/>
-                        <circle cx="28" cy="21" r="3" fill="#f5f5f0"/>
-                        <circle cx="16" cy="21" r="1.5" fill="#0c0e09"/>
-                        <circle cx="28" cy="21" r="1.5" fill="#0c0e09"/>
-                        <ellipse cx="22" cy="28" rx="4" ry="3" fill="#5a5a50"/>
-                        <defs>
-                            <linearGradient id="logo-grad" x1="0" y1="0" x2="44" y2="44">
-                                <stop stop-color="#5c7a2e"/>
-                                <stop offset="1" stop-color="#3d5a1f"/>
-                            </linearGradient>
-                        </defs>
-                    </svg>
+    <!-- FOUNDING 20 LAUNCH BANNER -->
+    <div class="launch-banner bg-gradient-to-r from-emerald-600 to-emerald-500 py-2.5 sm:py-3 px-3 sm:px-4 text-center relative z-50">
+        <p class="text-black font-bold text-xs sm:text-sm md:text-base leading-tight">
+            🚀 <span class="uppercase">Founding 20 Special</span> — 15% off + FREE hauling! 
+            <a href="#contact" class="underline hover:no-underline ml-1 sm:ml-2 whitespace-nowrap">Claim Spot →</a>
+        </p>
+    </div>
+    
+    <!-- NAVIGATION -->
+    <nav id="main-nav" class="fixed top-[48px] sm:top-12 left-0 right-0 z-40 bg-brand-darker/95 backdrop-blur-xl border-b border-white/5">
+        <div class="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="flex items-center gap-2">
+                    <img src="assets/logo.png" alt="GrizzFlow's Garage" class="w-10 h-10 sm:w-14 sm:h-14 object-contain drop-shadow-lg">
+                    <div class="hidden xs:block sm:block">
+                        <span class="font-black text-base sm:text-xl tracking-tight block leading-tight">GRIZZFLOW'S</span>
+                        <span class="font-bold text-[10px] sm:text-xs text-emerald-400 tracking-widest">GARAGE</span>
+                    </div>
+                </a>
+                <div class="hidden md:flex items-center gap-6 lg:gap-8">
+                    <a href="#services" class="text-white/60 hover:text-white transition-colors text-sm font-medium">Services</a>
+                    <a href="#pricing" class="text-white/60 hover:text-white transition-colors text-sm font-medium">Pricing</a>
+                    <a href="#faq" class="text-white/60 hover:text-white transition-colors text-sm font-medium">FAQ</a>
+                    <a href="#contact" class="bg-emerald-500 hover:bg-emerald-400 text-black font-bold px-5 py-2.5 lg:px-6 lg:py-3 rounded-lg transition-all text-sm">
+                        Get Free Quote
+                    </a>
                 </div>
-                <span class="logo-text">GrizzFlow's Garage</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#how">How It Works</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#areas">Service Areas</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <a href="#contact" class="nav-cta">Get Free Quote</a>
+                <!-- Mobile CTA - larger touch target -->
+                <a href="#contact" class="md:hidden bg-emerald-500 text-black font-bold px-4 py-2.5 rounded-lg text-sm min-w-[100px] text-center active:scale-95 transition-transform">
+                    Get Quote
+                </a>
+            </div>
         </div>
     </nav>
     
-    <!-- HERO -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-grid">
-                <div class="hero-content">
-                    <div class="hero-badge">Serving the South Bay</div>
-                    <h1>Can't park in your garage? <span>We fix that.</span></h1>
-                    <p class="hero-desc">Flat-rate garage cleanup starting at $350. We handle the junk removal, cleaning, and organization. You get your space back. Same-week scheduling available.</p>
-                    <div class="hero-ctas">
-                        <a href="#contact" class="btn-primary">
-                            Get Your Free Quote
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                        </a>
-                        <a href="#pricing" class="btn-secondary">See Pricing</a>
+    <!-- HERO SECTION -->
+    <section class="relative min-h-screen w-full overflow-hidden bg-brand-dark">
+        
+        <!-- Background Video -->
+        <div class="absolute inset-0">
+            <video 
+                autoplay 
+                loop 
+                muted 
+                playsinline
+                poster="assets/hero.png"
+                class="w-full h-full object-cover"
+            >
+                <source src="assets/hero-video.mp4" type="video/mp4">
+                <img src="assets/hero.png" alt="Luxury organized garage" class="w-full h-full object-cover">
+            </video>
+        </div>
+        
+        <!-- Overlay -->
+        <div class="hero-overlay absolute inset-0"></div>
+        
+        <!-- Hero Content -->
+        <div class="relative z-10 min-h-screen flex flex-col justify-center">
+            <div class="container mx-auto px-4 sm:px-6 md:px-12 pt-28 sm:pt-32 pb-16 sm:pb-20">
+                
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 px-4 py-2 rounded-full mb-8">
+                    <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+                    <span class="text-emerald-400 text-sm font-semibold">Now Serving South Bay LA</span>
+                </div>
+                
+                <!-- Main Headline -->
+                <h1 class="hero-headline text-shadow text-white font-black uppercase max-w-4xl">
+                    <span class="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[120px]">
+                        RECLAIM
+                    </span>
+                    <span class="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[120px]">
+                        YOUR
+                    </span>
+                    <span class="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[120px] text-emerald-400">
+                        GARAGE
+                    </span>
+                </h1>
+                
+                <!-- Subheadline -->
+                <p class="mt-8 text-white/60 text-lg md:text-xl lg:text-2xl max-w-xl font-medium">
+                    Professional cleanup & organization in South Bay LA. We transform cluttered chaos into functional space—in one visit.
+                </p>
+                
+                <!-- CTA Buttons -->
+                <div class="mt-10 flex flex-wrap gap-4">
+                    <a href="#contact" class="cta-btn grizzly-btn shake-on-hover inline-flex items-center justify-center bg-emerald-500 hover:bg-emerald-400 text-black font-bold text-lg px-8 py-4 rounded-xl transition-all duration-300">
+                        Get Free Quote
+                    </a>
+                    <a href="tel:+15098609850" class="inline-flex items-center justify-center border-2 border-white/20 hover:border-white/40 text-white font-bold text-lg px-8 py-4 rounded-xl transition-colors">
+                        📞 (509) 860-9850
+                    </a>
+                </div>
+                
+                <!-- Trust Indicators -->
+                <div class="mt-14 flex flex-wrap gap-x-8 gap-y-4 text-white/50 text-sm md:text-base">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>Same-Week Scheduling</span>
                     </div>
-                    <div class="trust-bar">
-                        <div class="trust-item">
-                            <div class="trust-icon">
-                                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                            </div>
-                            <div class="trust-text">
-                                <strong>Same Week</strong>
-                                <span>Scheduling</span>
-                            </div>
-                        </div>
-                        <div class="trust-item">
-                            <div class="trust-icon">
-                                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                            </div>
-                            <div class="trust-text">
-                                <strong>Flat Rate</strong>
-                                <span>No surprises</span>
-                            </div>
-                        </div>
-                        <div class="trust-item">
-                            <div class="trust-icon">
-                                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            </div>
-                            <div class="trust-text">
-                                <strong>Junk Hauled</strong>
-                                <span>Included free</span>
-                            </div>
-                        </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>Junk Hauling Included</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>Fully Insured</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>Flat-Rate from $399</span>
                     </div>
                 </div>
-                <div class="hero-visual">
-                    <div class="hero-image">
-                        <svg class="bear-mascot" viewBox="0 0 200 200" fill="none">
-                            <!-- Ears -->
-                            <circle cx="55" cy="45" r="28" fill="#3d5a1f"/>
-                            <circle cx="145" cy="45" r="28" fill="#3d5a1f"/>
-                            <circle cx="55" cy="45" r="16" fill="#5c7a2e"/>
-                            <circle cx="145" cy="45" r="16" fill="#5c7a2e"/>
-                            <!-- Head -->
-                            <ellipse cx="100" cy="100" rx="65" ry="55" fill="#3d5a1f"/>
-                            <!-- Snout -->
-                            <ellipse cx="100" cy="120" rx="28" ry="22" fill="#6b5540"/>
-                            <!-- Eyes -->
-                            <ellipse cx="72" cy="88" rx="14" ry="12" fill="#f5f5f0"/>
-                            <ellipse cx="128" cy="88" rx="14" ry="12" fill="#f5f5f0"/>
-                            <circle cx="72" cy="90" r="7" fill="#0c0e09"/>
-                            <circle cx="128" cy="90" r="7" fill="#0c0e09"/>
-                            <circle cx="69" cy="86" r="3" fill="#fff" opacity="0.7"/>
-                            <circle cx="125" cy="86" r="3" fill="#fff" opacity="0.7"/>
-                            <!-- Nose -->
-                            <ellipse cx="100" cy="115" rx="12" ry="9" fill="#2a3820"/>
-                            <!-- Mouth -->
-                            <path d="M88 132 Q100 142 112 132" stroke="#2a3820" stroke-width="3" fill="none" stroke-linecap="round"/>
-                            <!-- Body hint -->
-                            <ellipse cx="100" cy="175" rx="50" ry="30" fill="#2a3820"/>
-                        </svg>
-                        <div class="floating-badge top-right">
-                            <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            Done in 1 day
-                        </div>
-                        <div class="floating-badge bottom-left">
-                            <svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83"/></svg>
-                            From $350
-                        </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+            <svg class="w-6 h-6 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+            </svg>
+        </div>
+        
+        <!-- Floating Bear Mascot (appears on right side) -->
+        <div id="floating-bear" class="hidden lg:block fixed right-8 bottom-8 z-40 bear-float cursor-pointer transition-all duration-300 hover:scale-110" style="opacity: 0; transform: translateX(100px);">
+            <a href="#contact" title="Get a Free Quote!">
+                <img src="assets/logo.png" alt="GrizzFlow Bear" class="w-24 h-24 drop-shadow-2xl">
+                <div class="absolute -top-2 -left-2 bg-emerald-500 text-black text-xs font-bold px-2 py-1 rounded-full animate-pulse">
+                    Quote!
+                </div>
+            </a>
+        </div>
+    </section>
+    
+    <!-- SOCIAL PROOF BAR -->
+    <section class="py-6 bg-brand-dark border-y border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 text-center">
+                <div>
+                    <div class="flex items-center justify-center gap-1 text-yellow-400 text-xl mb-1">
+                        ★★★★★
+                    </div>
+                    <p class="text-white/40 text-sm">5-Star Service</p>
+                </div>
+                <div class="hidden sm:block w-px h-12 bg-white/10"></div>
+                <div>
+                    <div class="text-2xl font-bold text-white mb-1">100%</div>
+                    <p class="text-white/40 text-sm">Satisfaction Guaranteed</p>
+                </div>
+                <div class="hidden sm:block w-px h-12 bg-white/10"></div>
+                <div>
+                    <div class="text-2xl font-bold text-white mb-1">Same Week</div>
+                    <p class="text-white/40 text-sm">Scheduling Available</p>
+                </div>
+                <div class="hidden md:block w-px h-12 bg-white/10"></div>
+                <div class="hidden md:block">
+                    <div class="text-2xl font-bold text-emerald-400 mb-1">Insured</div>
+                    <p class="text-white/40 text-sm">Licensed & Bonded</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- BEFORE/AFTER SECTION -->
+    <section class="py-20 bg-brand-darker">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tight mb-4">
+                    The Transformation
+                </h2>
+                <p class="text-white/50">Real results. Real garages. Real happy homeowners.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+                <!-- Before -->
+                <div class="claw-reveal relative rounded-2xl overflow-hidden aspect-video cursor-pointer">
+                    <img src="assets/hero2.png" alt="Messy garage before cleanup" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-6 left-6">
+                        <span class="bg-red-500 text-white text-sm font-bold px-4 py-2 rounded-lg">BEFORE</span>
+                        <p class="text-white/60 mt-2 text-sm">Cluttered. Unusable. Stressful.</p>
+                    </div>
+                </div>
+                <!-- After -->
+                <div class="claw-reveal relative rounded-2xl overflow-hidden aspect-video cursor-pointer">
+                    <img src="assets/hero.png" alt="Organized garage after cleanup" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-6 left-6">
+                        <span class="bg-emerald-500 text-black text-sm font-bold px-4 py-2 rounded-lg">AFTER</span>
+                        <p class="text-white/60 mt-2 text-sm">Organized. Functional. Beautiful.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- PROBLEM/SOLUTION -->
-    <section class="section-dark">
-        <div class="container">
-            <div class="problem-grid">
-                <div class="problem-card problem">
-                    <h3><span class="icon">✕</span> Sound familiar?</h3>
-                    <ul class="problem-list">
-                        <li><span class="marker">✕</span> Car hasn't fit in the garage for years</li>
-                        <li><span class="marker">✕</span> Can't find tools when you need them</li>
-                        <li><span class="marker">✕</span> Keep saying "I'll do it this weekend"</li>
-                        <li><span class="marker">✕</span> No idea where to even start</li>
-                        <li><span class="marker">✕</span> Zero time for dump runs</li>
-                    </ul>
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-24 bg-brand-dark">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight mb-4 claw-scratch inline-block roar-text">
+                    What We Do
+                </h2>
+                <p class="text-white/50 text-lg max-w-2xl mx-auto">
+                    Complete garage transformation in one visit. No more excuses.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="card-hover bg-white/5 border border-white/10 rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-emerald-500/10 rounded-xl flex items-center justify-center">
+                        <span class="text-3xl">🧹</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Deep Clean</h3>
+                    <p class="text-white/50">
+                        We sweep, dust, clear cobwebs, degrease floors, and remove years of grime. Start fresh with a space you're proud of.
+                    </p>
                 </div>
-                <div class="problem-card solution">
-                    <h3><span class="icon">✓</span> How it actually goes:</h3>
-                    <ul class="problem-list">
-                        <li><span class="marker">✓</span> We show up, you point at what goes</li>
-                        <li><span class="marker">✓</span> We haul, clean, and organize</li>
-                        <li><span class="marker">✓</span> You walk into a usable garage</li>
-                        <li><span class="marker">✓</span> Your car fits. Tools are findable.</li>
-                        <li><span class="marker">✓</span> Done in a day, not "someday"</li>
-                    </ul>
+                
+                <!-- Service 2 -->
+                <div class="card-hover bg-white/5 border border-white/10 rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-emerald-500/10 rounded-xl flex items-center justify-center">
+                        <span class="text-3xl">📦</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Organization</h3>
+                    <p class="text-white/50">
+                        Strategic organization that maximizes your space. Create zones for tools, storage, and yes—actually park your car again.
+                    </p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="card-hover bg-white/5 border border-white/10 rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-emerald-500/10 rounded-xl flex items-center justify-center">
+                        <span class="text-3xl">🚛</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Junk Removal</h3>
+                    <p class="text-white/50">
+                        Don't want it? We take it. Haul-away included in every package. No extra trips to the dump. Just point and it's gone.
+                    </p>
                 </div>
             </div>
+        </div>
+    </section>
+    
+    <!-- Claw Divider -->
+    <div class="claw-divider bg-brand-darker"></div>
+    
+    <!-- PRICING SECTION -->
+    <section id="pricing" class="py-24 bg-brand-darker">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight mb-4">
+                    Simple Pricing
+                </h2>
+                <p class="text-white/50 text-lg max-w-2xl mx-auto">
+                    Flat-rate packages. No hourly surprises. Pick the one that matches your mess.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                <!-- Tier 1 -->
+                <div class="card-hover bg-white/5 border border-white/10 rounded-2xl p-8">
+                    <div class="text-4xl mb-4">😊</div>
+                    <h3 class="text-xl font-bold mb-2">The Cleanout</h3>
+                    <p class="text-white/40 text-sm mb-6">Can still park, just need organizing</p>
+                    <div class="text-4xl font-black text-emerald-400 mb-1">$399</div>
+                    <p class="text-white/30 text-xs mb-6">starting at</p>
+                    <ul class="space-y-3 text-white/50 text-sm">
+                        <li class="flex items-center gap-2">
+                            <span class="text-emerald-400">✓</span> 1-car garage
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-emerald-400">✓</span> Light cleanout
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-emerald-400">✓</span> Basic organization
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-emerald-400">✓</span> Junk hauling included
+                        </li>
+                    </ul>
+                    <a href="#contact" class="mt-6 block text-center py-3 border border-white/20 rounded-lg text-white/60 hover:text-white hover:border-white/40 transition-all text-sm font-medium">
+                        Get Quote
+                    </a>
+                </div>
+                
+                <!-- Tier 2 - Popular -->
+                <div class="card-hover bg-emerald-500/10 border-2 border-emerald-500/50 rounded-2xl p-8 relative">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-emerald-500 text-black text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wide">
+                        Most Popular
+                    </div>
+                    <div class="text-4xl mb-4">😅</div>
+                    <h3 class="text-xl font-bold mb-2">The Deep Clean</h3>
+                    <p class="text-white/40 text-sm mb-6">Car? What car? It's outside.</p>
+                    <div class="text-4xl font-black text-emerald-400 mb-1">$575</div>
+                    <p class="text-white/30 text-xs mb-6">starting at</p>
+                    <ul class="space-y-3 text-white/50 text-sm">
+                        <li class="flex items-center gap-2">
+                            <span class="text-emerald-400">✓</span> Up to 2-car garage
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-emerald-400">✓</span> Full cleanout + degrease
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-emerald-400">✓</span> Complete organization
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-emerald-400">✓</span> Junk hauling included
+                        </li>
+                    </ul>
+                    <a href="#contact" class="mt-6 block text-center py-3 bg-emerald-500 hover:bg-emerald-400 rounded-lg text-black font-bold transition-all text-sm">
+                        Get Quote
+                    </a>
+                </div>
+                
+                <!-- Tier 3 -->
+                <div class="card-hover bg-white/5 border border-white/10 rounded-2xl p-8">
+                    <div class="text-4xl mb-4">😰</div>
+                    <h3 class="text-xl font-bold mb-2">The Transformation</h3>
+                    <p class="text-white/40 text-sm mb-6">Might be a car under there</p>
+                    <div class="text-4xl font-black text-emerald-400 mb-1">$750</div>
+                    <p class="text-white/30 text-xs mb-6">starting at</p>
+                    <ul class="space-y-3 text-white/50 text-sm">
+                        <li class="flex items-center gap-2">
+                            <span class="text-emerald-400">✓</span> 2-3 car garage
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-emerald-400">✓</span> Heavy cleanout
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-emerald-400">✓</span> Premium organization
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-emerald-400">✓</span> Junk hauling included
+                        </li>
+                    </ul>
+                    <a href="#contact" class="mt-6 block text-center py-3 border border-white/20 rounded-lg text-white/60 hover:text-white hover:border-white/40 transition-all text-sm font-medium">
+                        Get Quote
+                    </a>
+                </div>
+                
+                <!-- Tier 4 -->
+                <div class="card-hover bg-white/5 border border-white/10 rounded-2xl p-8">
+                    <div class="text-4xl mb-4">🤯</div>
+                    <h3 class="text-xl font-bold mb-2">Code Red</h3>
+                    <p class="text-white/40 text-sm mb-6">Haven't seen the floor in years</p>
+                    <div class="text-4xl font-black text-emerald-400 mb-1">$1,100<span class="text-lg text-white/40">+</span></div>
+                    <p class="text-white/30 text-xs mb-6">starting at</p>
+                    <ul class="space-y-3 text-white/50 text-sm">
+                        <li class="flex items-center gap-2">
+                            <span class="text-emerald-400">✓</span> Any size garage
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-emerald-400">✓</span> Full transformation
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-emerald-400">✓</span> Custom solutions
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="text-emerald-400">✓</span> Junk hauling included
+                        </li>
+                    </ul>
+                    <a href="#contact" class="mt-6 block text-center py-3 border border-white/20 rounded-lg text-white/60 hover:text-white hover:border-white/40 transition-all text-sm font-medium">
+                        Get Quote
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Add-ons note -->
+            <p class="text-center text-white/30 text-sm mt-8">
+                Add-ons available: Epoxy floor coating, custom shelving, bike/tool wall mounts. Ask for details.
+            </p>
         </div>
     </section>
     
     <!-- HOW IT WORKS -->
-    <section id="how">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">How It Works</div>
-                <h2 class="section-title">3 steps. That's it.</h2>
+    <section id="how" class="py-24 bg-brand-dark">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight mb-4">
+                    How It Works
+                </h2>
+                <p class="text-white/50 text-lg">
+                    Three simple steps. One transformed garage.
+                </p>
             </div>
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-num">1</div>
-                    <h3>Book</h3>
-                    <p>Fill out the form or call us. We confirm within 24 hours and schedule your cleanup.</p>
+            
+            <div class="grid md:grid-cols-3 gap-8 lg:gap-16 max-w-5xl mx-auto">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 mx-auto mb-6 bg-emerald-500 text-black rounded-full flex items-center justify-center text-3xl font-black">
+                        1
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Send Us Photos</h3>
+                    <p class="text-white/50">
+                        Fill out our quick form with a few pics of your garage. We'll send a quote within 24 hours.
+                    </p>
                 </div>
-                <div class="step-card">
-                    <div class="step-num">2</div>
-                    <h3>Point</h3>
-                    <p>We show up. You tell us what stays and what goes. Then go about your day.</p>
+                
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 mx-auto mb-6 bg-emerald-500 text-black rounded-full flex items-center justify-center text-3xl font-black">
+                        2
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">We Transform It</h3>
+                    <p class="text-white/50">
+                        We show up and handle everything. You tell us what stays and what goes. Done in one visit.
+                    </p>
                 </div>
-                <div class="step-card">
-                    <div class="step-num">3</div>
-                    <h3>Park</h3>
-                    <p>Walk into your clean garage. Actually use the space you're paying for.</p>
+                
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 mx-auto mb-6 bg-emerald-500 text-black rounded-full flex items-center justify-center text-3xl font-black">
+                        3
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Enjoy Your Space</h3>
+                    <p class="text-white/50">
+                        Park your car. Find your tools. Host the Super Bowl. Actually use your garage again.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- PRICING -->
-    <section class="section-dark" id="pricing">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">Pricing</div>
-                <h2 class="section-title">Flat rates. No hourly BS.</h2>
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-24 bg-brand-darker">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tight mb-4">
+                    Questions?
+                </h2>
+                <p class="text-white/50 text-lg">
+                    We've got answers.
+                </p>
             </div>
-            <div class="pricing-grid">
-                <div class="price-card">
-                    <div class="price-tier">Light</div>
-                    <div class="price-amount">$350</div>
-                    <p class="price-desc">1-car garage, light clutter</p>
-                    <ul class="price-features">
-                        <li>Light cleanout</li>
-                        <li>Basic organization</li>
-                        <li>Junk hauling included</li>
-                        <li>Same-week scheduling</li>
-                    </ul>
-                    <button class="price-cta" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">Get Quote</button>
+            
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="faq-item bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                    <button class="faq-trigger w-full px-6 py-5 flex justify-between items-center text-left">
+                        <span class="font-bold text-lg">How long does a cleanup take?</span>
+                        <span class="faq-icon text-emerald-400 text-2xl transition-transform">+</span>
+                    </button>
+                    <div class="faq-answer px-6 pb-5">
+                        <p class="text-white/50">Most cleanups take 2-6 hours depending on garage size and condition. A light cleanout might be 2-3 hours, while a full Code Red transformation can take a full day. We'll give you an estimate when we quote.</p>
+                    </div>
                 </div>
-                <div class="price-card featured">
-                    <div class="price-tier">Standard</div>
-                    <div class="price-amount">$525</div>
-                    <p class="price-desc">2-car or heavy 1-car</p>
-                    <ul class="price-features">
-                        <li>Full cleanout</li>
-                        <li>Complete organization</li>
-                        <li>Junk hauling included</li>
-                        <li>Priority scheduling</li>
-                    </ul>
-                    <button class="price-cta" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">Get Quote</button>
+                
+                <!-- FAQ 2 -->
+                <div class="faq-item bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                    <button class="faq-trigger w-full px-6 py-5 flex justify-between items-center text-left">
+                        <span class="font-bold text-lg">What happens to the junk?</span>
+                        <span class="faq-icon text-emerald-400 text-2xl transition-transform">+</span>
+                    </button>
+                    <div class="faq-answer px-6 pb-5">
+                        <p class="text-white/50">We haul it away—that's included in every package. Items in good condition get donated. The rest is properly disposed of. You don't have to make any trips to the dump.</p>
+                    </div>
                 </div>
-                <div class="price-card">
-                    <div class="price-tier">Deep</div>
-                    <div class="price-amount">$695</div>
-                    <p class="price-desc">Major cleanouts</p>
-                    <ul class="price-features">
-                        <li>Major cleanout</li>
-                        <li>Detailed organization</li>
-                        <li>Junk hauling included</li>
-                        <li>Before/after photos</li>
-                    </ul>
-                    <button class="price-cta" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">Get Quote</button>
+                
+                <!-- FAQ 3 -->
+                <div class="faq-item bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                    <button class="faq-trigger w-full px-6 py-5 flex justify-between items-center text-left">
+                        <span class="font-bold text-lg">Do I need to be home?</span>
+                        <span class="faq-icon text-emerald-400 text-2xl transition-transform">+</span>
+                    </button>
+                    <div class="faq-answer px-6 pb-5">
+                        <p class="text-white/50">We recommend it, at least for the start. You'll walk us through what's definitely keep vs. definitely go. After that, you can head out if you want—we'll text you when we're wrapping up for the big reveal.</p>
+                    </div>
                 </div>
-                <div class="price-card">
-                    <div class="price-tier">Total</div>
-                    <div class="price-amount">$950+</div>
-                    <p class="price-desc">Extreme situations</p>
-                    <ul class="price-features">
-                        <li>Unlimited scope</li>
-                        <li>Multi-day if needed</li>
-                        <li>Junk hauling included</li>
-                        <li>Custom solutions</li>
-                    </ul>
-                    <button class="price-cta" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">Get Quote</button>
+                
+                <!-- FAQ 4 -->
+                <div class="faq-item bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                    <button class="faq-trigger w-full px-6 py-5 flex justify-between items-center text-left">
+                        <span class="font-bold text-lg">Are you insured?</span>
+                        <span class="faq-icon text-emerald-400 text-2xl transition-transform">+</span>
+                    </button>
+                    <div class="faq-answer px-6 pb-5">
+                        <p class="text-white/50">Yes. Fully insured and licensed. We carry general liability coverage so you're protected. This isn't some random Craigslist operation.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 5 -->
+                <div class="faq-item bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                    <button class="faq-trigger w-full px-6 py-5 flex justify-between items-center text-left">
+                        <span class="font-bold text-lg">What if I can do it myself?</span>
+                        <span class="faq-icon text-emerald-400 text-2xl transition-transform">+</span>
+                    </button>
+                    <div class="faq-answer px-6 pb-5">
+                        <p class="text-white/50">You absolutely could. Most people find that between work, weekends, and life—it stays on the to-do list for months (or years). We knock it out in one session so you get your weekend back. How long has it been on your list?</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 6 -->
+                <div class="faq-item bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                    <button class="faq-trigger w-full px-6 py-5 flex justify-between items-center text-left">
+                        <span class="font-bold text-lg">What areas do you serve?</span>
+                        <span class="faq-icon text-emerald-400 text-2xl transition-transform">+</span>
+                    </button>
+                    <div class="faq-answer px-6 pb-5">
+                        <p class="text-white/50">All of South Bay LA: Hermosa Beach, Manhattan Beach, Redondo Beach, Torrance, El Segundo, Palos Verdes, Hawthorne, Lawndale, Gardena, and surrounding areas. Not sure if you're in range? Just ask.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CONTACT / QUOTE FORM SECTION -->
+    <section id="contact" class="py-24 bg-brand-dark border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight mb-4" style="line-height: 1.1;">
+                        Get Your Free Quote
+                    </h2>
+                    <p class="text-white/50 text-lg max-w-xl mx-auto">
+                        Send us a few details and we'll get back to you within 24 hours with a flat-rate quote.
+                    </p>
+                </div>
+                
+                <div class="grid lg:grid-cols-5 gap-6 lg:gap-8">
+                    <!-- Form -->
+                    <div class="lg:col-span-3 order-2 lg:order-1">
+                        <form action="https://formspree.io/f/xnjbqwde" method="POST" class="space-y-5">
+                            <div class="grid sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label class="block text-white/60 text-sm mb-2">Name *</label>
+                                    <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg text-white" placeholder="Your name">
+                                </div>
+                                <div>
+                                    <label class="block text-white/60 text-sm mb-2">Phone *</label>
+                                    <input type="tel" name="phone" required class="w-full px-4 py-3 rounded-lg text-white" placeholder="(555) 123-4567">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-white/60 text-sm mb-2">Email</label>
+                                <input type="email" name="email" class="w-full px-4 py-3 rounded-lg text-white" placeholder="you@example.com">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-white/60 text-sm mb-2">Address (City/Neighborhood)</label>
+                                <input type="text" name="address" class="w-full px-4 py-3 rounded-lg text-white" placeholder="e.g. Hermosa Beach">
+                            </div>
+                            
+                            <div class="grid sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label class="block text-white/60 text-sm mb-2">Garage Size</label>
+                                    <select name="garage_size" class="w-full px-4 py-3 rounded-lg text-white">
+                                        <option value="">Select...</option>
+                                        <option value="1-car">1-Car Garage</option>
+                                        <option value="2-car">2-Car Garage</option>
+                                        <option value="3-car">3-Car Garage</option>
+                                        <option value="other">Other / Not Sure</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-white/60 text-sm mb-2">Mess Level</label>
+                                    <select name="mess_level" class="w-full px-4 py-3 rounded-lg text-white">
+                                        <option value="">Select...</option>
+                                        <option value="light">😊 Kinda Messy</option>
+                                        <option value="medium">😅 Pretty Bad</option>
+                                        <option value="heavy">😰 Send Help</option>
+                                        <option value="extreme">🤯 Code Red</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-white/60 text-sm mb-2">Anything else we should know?</label>
+                                <textarea name="message" rows="3" class="w-full px-4 py-3 rounded-lg text-white" placeholder="Special requests, timeline, questions..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="cta-btn grizzly-btn shake-on-hover w-full bg-emerald-500 hover:bg-emerald-400 text-black font-bold text-lg py-4 rounded-xl transition-all duration-300">
+                                Send Quote Request
+                            </button>
+                            
+                            <p class="text-white/30 text-xs text-center">
+                                We'll respond within 24 hours. No spam, ever.
+                            </p>
+                        </form>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div class="lg:col-span-2 space-y-4 lg:space-y-6 order-1 lg:order-2">
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                            <h3 class="font-bold text-lg mb-4">Prefer to talk?</h3>
+                            <a href="tel:+15098609850" class="flex items-center gap-3 text-emerald-400 hover:text-emerald-300 transition-colors text-lg font-medium mb-4">
+                                <span>📞</span>
+                                <span>(509) 860-9850</span>
+                            </a>
+                            <a href="mailto:griffeyhalle11@gmail.com" class="flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+                                <span>✉️</span>
+                                <span>griffeyhalle11@gmail.com</span>
+                            </a>
+                        </div>
+                        
+                        <div class="bg-emerald-500/10 border border-emerald-500/30 rounded-xl p-6">
+                            <h3 class="font-bold text-lg mb-2 text-emerald-400">🚀 Founding 20 Special</h3>
+                            <p class="text-white/60 text-sm mb-3">Be one of our first 20 customers and get:</p>
+                            <ul class="text-white/50 text-sm space-y-2">
+                                <li class="flex items-center gap-2">
+                                    <span class="text-emerald-400">✓</span> 15% off any service
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="text-emerald-400">✓</span> FREE junk hauling upgrade
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="text-emerald-400">✓</span> Locked-in 2026 pricing
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="text-white/30 text-sm">
+                            <p class="font-medium text-white/50 mb-2">Service Area:</p>
+                            <p>Hermosa Beach, Manhattan Beach, Redondo Beach, Torrance, El Segundo, Palos Verdes, Hawthorne, Lawndale, Gardena</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- SERVICE AREAS -->
-    <section id="areas">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">Service Areas</div>
-                <h2 class="section-title">Serving the South Bay</h2>
-            </div>
-            <div class="areas-grid">
-                <a href="/garage-cleanup-hermosa-beach/" class="area-card">
-                    <h4>Hermosa Beach <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></h4>
-                    <p>Beach town garages, surfboard storage</p>
-                </a>
-                <a href="/garage-cleanup-manhattan-beach/" class="area-card">
-                    <h4>Manhattan Beach <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></h4>
-                    <p>Premium homes, busy professionals</p>
-                </a>
-                <a href="/garage-cleanup-redondo-beach/" class="area-card">
-                    <h4>Redondo Beach <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></h4>
-                    <p>Riviera Village to North Redondo</p>
-                </a>
-                <a href="/garage-cleanup-torrance/" class="area-card">
-                    <h4>Torrance <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></h4>
-                    <p>Workshop cleanups, larger garages</p>
-                </a>
-                <a href="/garage-cleanup-el-segundo/" class="area-card">
-                    <h4>El Segundo <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></h4>
-                    <p>Aerospace & tech professionals</p>
-                </a>
-                <a href="/garage-cleanup-palos-verdes/" class="area-card">
-                    <h4>Palos Verdes <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></h4>
-                    <p>Estate garages, premium service</p>
-                </a>
-            </div>
+    <!-- MOBILE STICKY CTA BAR -->
+    <div id="mobile-cta-bar" class="fixed bottom-0 left-0 right-0 z-50 bg-brand-darker/95 backdrop-blur-xl border-t border-white/10 p-3 sm:hidden" style="display: none;">
+        <div class="flex gap-2">
+            <a href="tel:+15098609850" class="flex-1 bg-white/10 text-white font-bold py-3 rounded-lg text-center text-sm active:scale-95 transition-transform">
+                📞 Call
+            </a>
+            <a href="#contact" class="flex-[2] bg-emerald-500 text-black font-bold py-3 rounded-lg text-center text-sm active:scale-95 transition-transform">
+                Get Free Quote
+            </a>
         </div>
-    </section>
-    
-    <!-- CONTACT -->
-    <section class="section-dark" id="contact">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h2>Ready? Let's go.</h2>
-                    <p>Free quote. No pressure. We'll get back to you within 24 hours to schedule.</p>
-                    <div class="contact-methods">
-                        <a href="tel:5098609850" class="contact-method">
-                            <div class="method-icon">
-                                <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                            </div>
-                            <div>
-                                <div class="method-label">Call or text</div>
-                                <div class="method-value">(509) 860-9850</div>
-                            </div>
-                        </a>
-                        <a href="mailto:grizzflowsgarage@gmail.com" class="contact-method">
-                            <div class="method-icon">
-                                <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                            </div>
-                            <div>
-                                <div class="method-label">Email</div>
-                                <div class="method-value">grizzflowsgarage@gmail.com</div>
-                            </div>
-                        </a>
-                        <div class="contact-method">
-                            <div class="method-icon">
-                                <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            </div>
-                            <div>
-                                <div class="method-label">Serving</div>
-                                <div class="method-value">South Bay, Los Angeles</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <form class="contact-form" name="garage-quote" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                    <input type="hidden" name="form-name" value="garage-quote">
-                    <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="garage-size">Garage Size</label>
-                        <select id="garage-size" name="garage-size" required>
-                            <option value="">Select size</option>
-                            <option value="1-car-light">1-Car (Light)</option>
-                            <option value="1-car-heavy">1-Car (Heavy)</option>
-                            <option value="2-car">2-Car</option>
-                            <option value="3-car">3-Car</option>
-                            <option value="extreme">Extreme</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Anything else? (optional)</label>
-                        <textarea id="message" name="message"></textarea>
-                    </div>
-                    <button type="submit" class="form-submit">Get My Free Quote</button>
-                </form>
-            </div>
-        </div>
-    </section>
+    </div>
     
     <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <div class="footer-top">
-                <a href="/" class="logo">
-                    <span class="logo-text">GrizzFlow's Garage</span>
-                </a>
-                <div class="footer-links">
-                    <a href="#how">How It Works</a>
-                    <a href="#pricing">Pricing</a>
-                    <a href="#areas">Areas</a>
-                    <a href="#contact">Contact</a>
+    <footer class="py-8 pb-24 sm:pb-8 bg-black border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex items-center gap-3">
+                    <img src="assets/logo.png" alt="GrizzFlow's" class="w-12 h-12 object-contain">
+                    <div>
+                        <span class="font-black block">GRIZZFLOW'S</span>
+                        <span class="text-emerald-400 text-xs tracking-widest">GARAGE</span>
+                    </div>
                 </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 GrizzFlow's Garage. All rights reserved.</p>
-                <p class="footer-areas">Hermosa Beach · Manhattan Beach · Redondo Beach · Torrance · El Segundo · Palos Verdes</p>
+                <div class="flex items-center gap-6 text-white/30 text-sm">
+                    <span>South Bay, Los Angeles</span>
+                    <span>•</span>
+                    <a href="tel:+15098609850" class="hover:text-white transition-colors">(509) 860-9850</a>
+                </div>
+                <p class="text-white/30 text-sm">
+                    © 2026 GrizzFlow's Garage. All rights reserved.
+                </p>
             </div>
         </div>
     </footer>
     
+    <!-- GSAP Animations -->
     <script>
         gsap.registerPlugin(ScrollTrigger);
         
-        // Hero animations
-        gsap.from('.hero-badge', { opacity: 0, y: 20, duration: 0.6, delay: 0.2 });
-        gsap.from('.hero h1', { opacity: 0, y: 30, duration: 0.8, delay: 0.3 });
-        gsap.from('.hero-desc', { opacity: 0, y: 20, duration: 0.6, delay: 0.5 });
-        gsap.from('.hero-ctas', { opacity: 0, y: 20, duration: 0.6, delay: 0.7 });
-        gsap.from('.trust-item', { opacity: 0, y: 20, duration: 0.5, stagger: 0.1, delay: 0.9 });
-        gsap.from('.hero-visual', { opacity: 0, x: 40, duration: 0.8, delay: 0.5 });
-        gsap.from('.floating-badge', { opacity: 0, scale: 0.8, duration: 0.5, stagger: 0.2, delay: 1.2 });
+        // Fade in hero content
+        gsap.from('.hero-headline span', {
+            y: 50,
+            opacity: 0,
+            stagger: 0.1,
+            duration: 1,
+            ease: 'power3.out',
+            delay: 0.3
+        });
         
-        // Section animations
-        gsap.utils.toArray('.problem-card, .step-card, .price-card, .area-card').forEach((el, i) => {
-            gsap.from(el, {
-                scrollTrigger: { trigger: el, start: 'top 85%' },
+        // Animate sections on scroll
+        gsap.utils.toArray('section').forEach(section => {
+            gsap.from(section.querySelectorAll('h2, h3, p, .card-hover, .faq-item'), {
+                y: 30,
                 opacity: 0,
-                y: 40,
-                duration: 0.6,
-                delay: i % 4 * 0.1
+                stagger: 0.05,
+                duration: 0.8,
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: section,
+                    start: 'top 80%',
+                    toggleActions: 'play none none none'
+                }
             });
         });
         
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(a => {
-            a.addEventListener('click', e => {
-                e.preventDefault();
-                document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
+        // FAQ Accordion
+        document.querySelectorAll('.faq-trigger').forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const item = trigger.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Close all
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                
+                // Open clicked if wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
             });
         });
+        
+        // GRIZZLY INTERACTIONS
+        
+        // Floating bear appears after scrolling past hero
+        const floatingBear = document.getElementById('floating-bear');
+        let bearVisible = false;
+        
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            const heroHeight = window.innerHeight;
+            
+            if (scrollY > heroHeight * 0.5 && !bearVisible) {
+                bearVisible = true;
+                floatingBear.style.opacity = '1';
+                floatingBear.style.transform = 'translateX(0)';
+            } else if (scrollY <= heroHeight * 0.3 && bearVisible) {
+                bearVisible = false;
+                floatingBear.style.opacity = '0';
+                floatingBear.style.transform = 'translateX(100px)';
+            }
+        });
+        
+        // Bear growl effect on CTA click (subtle vibration)
+        document.querySelectorAll('.grizzly-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                if (navigator.vibrate) {
+                    navigator.vibrate([50, 30, 50]);
+                }
+            });
+        });
+        
+        // Random bear emoji rain on pricing section (subtle)
+        const pricingSection = document.getElementById('pricing');
+        let emojiRainTriggered = false;
+        
+        const triggerEmojiRain = () => {
+            if (emojiRainTriggered) return;
+            emojiRainTriggered = true;
+            
+            const emojis = ['🐻', '🐾', '💪', '✨'];
+            for (let i = 0; i < 8; i++) {
+                setTimeout(() => {
+                    const emoji = document.createElement('div');
+                    emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+                    emoji.style.cssText = `
+                        position: fixed;
+                        top: -50px;
+                        left: ${Math.random() * 100}vw;
+                        font-size: ${20 + Math.random() * 20}px;
+                        pointer-events: none;
+                        z-index: 9999;
+                        opacity: 0.7;
+                    `;
+                    document.body.appendChild(emoji);
+                    
+                    gsap.to(emoji, {
+                        y: window.innerHeight + 100,
+                        x: (Math.random() - 0.5) * 200,
+                        rotation: Math.random() * 360,
+                        duration: 2 + Math.random() * 2,
+                        ease: 'power1.in',
+                        onComplete: () => emoji.remove()
+                    });
+                }, i * 150);
+            }
+        };
+        
+        // Trigger emoji rain when pricing section comes into view
+        ScrollTrigger.create({
+            trigger: '#pricing',
+            start: 'top 60%',
+            onEnter: triggerEmojiRain,
+            once: true
+        });
+        
+        // Mobile sticky CTA bar - show after scrolling past hero
+        const mobileCTABar = document.getElementById('mobile-cta-bar');
+        const contactSection = document.getElementById('contact');
+        
+        if (window.innerWidth < 640) {
+            window.addEventListener('scroll', () => {
+                const scrollY = window.scrollY;
+                const heroHeight = window.innerHeight;
+                const contactTop = contactSection.getBoundingClientRect().top;
+                
+                // Show after hero, hide when in contact section
+                if (scrollY > heroHeight * 0.7 && contactTop > window.innerHeight * 0.5) {
+                    mobileCTABar.style.display = 'block';
+                } else {
+                    mobileCTABar.style.display = 'none';
+                }
+            });
+        }
     </script>
+
 </body>
 </html>
+
+
